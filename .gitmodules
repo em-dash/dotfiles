@@ -1,0 +1,6 @@
+[submodule "config/kak/plugins/plug.kak"]
+	path = config/kak/plugins/plug.kak
+	url = https://github.com/robertmeta/plug.kak
+[submodule "config/kitty/base16-kitty"]
+	path = config/kitty/base16-kitty
+	url = https://github.com/kdrag0n/base16-kitty

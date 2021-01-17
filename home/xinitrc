@@ -1,0 +1,17 @@
+xrdb ~/.Xresources
+
+xrandr --auto
+
+#xinput --set-prop "Elan Touchpad" "libinput Tapping Enabled" 1
+#xinput --set-prop "Logitech Wireless Mouse" "libinput Accel Profile Enabled" 0, 0
+#xinput --set-prop "Logitech Wireless Mouse" "Coordinate Transformation Matrix" 0.35, 0.0, 0.0, 0.0, 0.35, 0.0, 0.0, 0.0, 1.0
+xinput --set-prop "Kingsis Peripherals ZOWIE Gaming mouse" "Coordinate Transformation Matrix" 0.35, 0.0, 0.0, 0.0, 0.35, 0.0, 0.0, 0.0, 1.0
+xinput --set-prop "ETPS/2 Elantech Touchpad" "libinput Tapping Enabled" 1
+
+[ -f ~/.Xmodmap ] && xmodmap ~/.Xmodmap
+
+xbindkeys
+
+dwmstatus 2>&1 >/dev/null &
+
+exec cwm

@@ -1,0 +1,14 @@
+
+
+# mapping
+
+# hjkl to hnei
+map h left
+map n down
+map e up
+map i right
+
+map j search forward
+map J search backward
+
+

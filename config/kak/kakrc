@@ -1,0 +1,148 @@
+
+# plugins
+
+source "%val{config}/plugins/plug.kak/rc/plug.kak"
+plug "robertmeta/plug.kak" noload
+
+plug "Vurich/ranger-kak"
+# TODO ranger keys
+
+# plug "alexherbo2/prelude.kak"
+# plug "alexherbo2/auto-pairs.kak" # this has problems
+
+
+
+map global normal n j
+map global normal N J
+map global normal j n
+map global normal J N
+map global normal <a-j> <a-n>
+map global normal <a-J> <a-N>
+map global normal <a-n> <a-j>
+map global normal <a-N> <a-J>
+map global goto n j -docstring "buffer bottom"
+unmap global goto j
+
+map global normal e k
+map global normal E K
+map global normal k i
+map global normal K I
+map global goto e k -docstring "buffer top"
+unmap global goto k
+
+map global normal i l
+map global normal I L
+map global normal l e
+map global normal L E
+map global goto i l -docstring "line end"
+unmap global goto l
+# TODO fix shift-h,n,e,i in goto mode
+
+map global normal <space> , -docstring "user mode"
+map global normal , <space> -docstring "clear all except main selection"
+
+map global user b :bn<ret> -docstring "next buffer"
+map global user B :bp<ret> -docstring "previous buffer"
+
+
+declare-option -docstring "Guideline for the maximum lenghth of lines" int textwidth 
+
+declare-user-mode tags # tags stuff such as ctags
+declare-user-mode filetools # filetype and/or toolchain specific bindings
+
+map global user a :enter-user-mode<space>tags<ret> -docstring "ctags"
+map global tags j :ctags-search<ret> -docstring "search selection"
+map global tags / :ctags-search -docstring "search"
+map global tags p :ctags-generate<ret> -docstring "(re)generate tags"
+
+# hook global BufWritePost .* %{
+#     try ctags-update-tags
+# }
+
+define-command -hidden set-soft-tabs %{
+    hook global InsertChar \t %{ try %{
+          execute-keys -draft "h<a-h><a-k>\A\h+\z<ret><a-;>;%opt{indentwidth}@"
+    }}
+
+    hook global InsertDelete ' ' %{ try %{
+          execute-keys -draft 'h<a-h><a-k>\A\h+\z<ret>i<space><esc><lt>'
+    }}
+}
+
+
+set-option global indentwidth 4
+set-option global tabstop 4
+
+
+# filetypes
+hook global WinSetOption filetype=c %{
+    # ctags-enable-autocomplete
+
+    set-option window indentwidth 4
+    set-option window tabstop 4
+    set-soft-tabs
+
+	set window textwidth 80
+    add-highlighter window/ column '%opt{textwidth}' default,bright-black
+}
+
+hook global WinSetOption filetype=rust %{
+    # ctags-enable-autocomplete
+
+    set-option window indentwidth 4
+    set-option window tabstop 4
+    set-soft-tabs
+
+	set window textwidth 99
+    add-highlighter window/ column '%opt{textwidth}' default,bright-black
+
+	# TODO cargo binds here
+}
+
+hook global WinSetOption filetype=zig %{
+    set buffer makecmd "zig build-exe %val{buffile}"
+}
+
+# read only
+
+hook global WinSetOption filetype=man %{
+    # override the global highlighter
+    remove-highlighter window/number_lines
+
+	# TODO readonly breaks man-impl apparently idk
+#    set-option buffer readonly true
+
+    map window normal n vj
+    map window normal e vk
+    map window normal h vh
+    map window normal b <c-b>
+    map window normal i vl
+    map window normal f <c-f>
+}
+
+hook global WinSetOption filetype=markdown %{
+    add-highlighter buffer/ wrap -word -indent
+}
+
+
+
+# appearance
+
+# line numbers
+hook global WinCreate .* %{
+    add-highlighter window/number_lines number-lines -hlcursor -separator '|'
+}
+
+set-face global LineNumbersWrapped bright-black
+set-face global LineNumberCursor bright-white+b
+
+set-option global ui_options ncurses_assistant=cat
+
+# whitespaces
+# TODO make this figure out if the terminal can show the unicode symbols
+# set-face global Whitespace bright-black
+# add-highlighter global/ show-whitespaces -tab "↹" -lf " " -spc " "
+
+# interface
+set-face global PrimaryCursorEol black,bright-black
+set-face global SecondaryCursorEol black,bright-black
