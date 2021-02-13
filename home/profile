@@ -4,26 +4,23 @@ if [ -f /etc/profile ] ; then
 	source /etc/profile
 fi
 
+# variables
 export LANG='en_US.UTF-8'
-
-# lol dotnet tools apparently needs this to work
-export DOTNET_ROOT='/opt/dotnet'
-
-
-
+export DOTNET_ROOT='/opt/dotnet' # lol dotnet tools apparently needs this to work
 PATH=${PATH}:~/.local/bin:~/.local/sbin:~/.dotnet/tools:~/.cargo/bin:~/.gem/ruby/2.7.0/bin:/usr/lib/ruby/gems/2.7.0/:/opt/flutter/bin/:~/.cabal/bin
 # PATH=${PATH}:~/.gem/ruby/$(ruby -v | grep -Po '\d+\.\d+\.\d+')/bin
 export PATH
-
 export MAKEFLAGS='-j4'
-
 export EDITOR='kak'
-
 export AURDEST=~/aur
-
 export _JAVA_AWT_WM_NONREPARENTING=1
 
+
+# do stuff
+eval `ssh-agent -s`
+
 # this is from coreutils
+# idk if there is a sensible way to make this always work
 # eval $(dircolors)
 
 
