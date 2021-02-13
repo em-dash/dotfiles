@@ -17,7 +17,7 @@ export _JAVA_AWT_WM_NONREPARENTING=1
 
 
 # do stuff
-eval `ssh-agent -s`
+eval `ssh-agent -s > /dev/null 2>&1`
 
 # this is from coreutils
 # idk if there is a sensible way to make this always work
