@@ -15,6 +15,8 @@ export EDITOR='kak'
 export AURDEST=~/aur
 export _JAVA_AWT_WM_NONREPARENTING=1
 
+export GITHUBMAIL='33614480+em-dash@users.noreply.github.com'
+
 
 # do stuff
 eval `ssh-agent -s > /dev/null 2>&1`
