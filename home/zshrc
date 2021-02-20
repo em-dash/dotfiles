@@ -20,6 +20,9 @@ zstyle :compinstall filename '/home/mew/.zshrc'
 autoload -Uz compinit
 compinit
 
+# type less passwords
+eval "$(ssh-agent -s > /dev/null 2>&1)"
+
 # prompt
 PROMPT="
 %F{5}%n%f%F{7}@%f%F{4}%m%f %F{15}%~%f
@@ -34,6 +37,7 @@ alias odx="od -t x1z"
 
 # functions
 function reboot-to-windows {
+    # this should maybe be a script idk
     WINDOWS_TITLE=`sudo grep -i 'windows' /boot/grub/grub.cfg|cut -d"'" -f2`
     sudo grub-reboot "$WINDOWS_TITLE"
     sudo reboot
