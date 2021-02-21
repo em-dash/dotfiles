@@ -6,21 +6,25 @@ fi
 
 # variables
 export LANG='en_US.UTF-8'
-export DOTNET_ROOT='/opt/dotnet' # lol dotnet tools apparently needs this to work
-PATH=${PATH}:~/.local/bin:~/.local/sbin:~/.dotnet/tools:~/.cargo/bin:~/.gem/ruby/2.7.0/bin:/usr/lib/ruby/gems/2.7.0/:/opt/flutter/bin/:~/.cabal/bin
+
+PATH=${PATH}:~/.local/bin
+PATH=${PATH}:~/.cargo/bin
+PATH=${PATH}:~/.gem/ruby/2.7.0/bin:/usr/lib/ruby/gems/2.7.0/
+PATH=${PATH}:~/.cabal/bin
+# TODO fix this and make it better (check if ruby is installed lol)
 # PATH=${PATH}:~/.gem/ruby/$(ruby -v | grep -Po '\d+\.\d+\.\d+')/bin
 export PATH
-export MAKEFLAGS='-j4'
+
 export EDITOR='kak'
-export AURDEST=~/aur
-export _JAVA_AWT_WM_NONREPARENTING=1
+
+export GITHUBMAIL='33614480+em-dash@users.noreply.github.com'
 
 
-# do stuff
-eval `ssh-agent -s > /dev/null 2>&1`
+
 
 # this is from coreutils
 # idk if there is a sensible way to make this always work
+# TODO
 # eval $(dircolors)
 
 
