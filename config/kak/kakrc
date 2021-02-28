@@ -11,7 +11,6 @@ plug "Vurich/ranger-kak"
 # plug "alexherbo2/auto-pairs.kak" # this has problems
 
 
-
 map global normal n j
 map global normal N J
 map global normal j n
@@ -59,15 +58,16 @@ map global tags p :ctags-generate<ret> -docstring "(re)generate tags"
 #     try ctags-update-tags
 # }
 
-define-command -hidden set-soft-tabs %{
-    hook global InsertChar \t %{ try %{
-          execute-keys -draft "h<a-h><a-k>\A\h+\z<ret><a-;>;%opt{indentwidth}@"
-    }}
-
-    hook global InsertDelete ' ' %{ try %{
-          execute-keys -draft 'h<a-h><a-k>\A\h+\z<ret>i<space><esc><lt>'
-    }}
-}
+# TODO figure out if/how kakoune changed lol and then do a better solution
+#define-command -hidden set-soft-tabs %{
+#    hook global InsertChar \t %{ try %{
+#          execute-keys -draft "h<a-h><a-k>\A\h+\z<ret><a-;>;%opt{indentwidth}@"
+#    }}
+#
+#    hook global InsertDelete ' ' %{ try %{
+#          execute-keys -draft 'h<a-h><a-k>\A\h+\z<ret>i<space><esc><lt>'
+#    }}
+#}
 
 
 set-option global indentwidth 4
@@ -80,7 +80,7 @@ hook global WinSetOption filetype=c %{
 
     set-option window indentwidth 4
     set-option window tabstop 4
-    set-soft-tabs
+    # set-soft-tabs
 
 	set window textwidth 80
     add-highlighter window/ column '%opt{textwidth}' default,bright-black
@@ -91,7 +91,7 @@ hook global WinSetOption filetype=rust %{
 
     set-option window indentwidth 4
     set-option window tabstop 4
-    set-soft-tabs
+    # set-soft-tabs
 
 	set window textwidth 99
     add-highlighter window/ column '%opt{textwidth}' default,bright-black
