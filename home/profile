@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/zsh
 
 if [ -f /etc/profile ] ; then 
 	source /etc/profile
@@ -15,11 +15,10 @@ PATH=${PATH}:~/.cabal/bin
 # PATH=${PATH}:~/.gem/ruby/$(ruby -v | grep -Po '\d+\.\d+\.\d+')/bin
 export PATH
 
+
 export EDITOR='kak'
 
 export GITHUBMAIL='33614480+em-dash@users.noreply.github.com'
-
-
 
 
 # this is from coreutils

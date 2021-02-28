@@ -20,9 +20,6 @@ zstyle :compinstall filename '/home/mew/.zshrc'
 autoload -Uz compinit
 compinit
 
-# type less passwords
-eval "$(ssh-agent -s > /dev/null 2>&1)"
-
 # prompt
 PROMPT="
 %F{5}%n%f%F{7}@%f%F{4}%m%f %F{15}%~%f
