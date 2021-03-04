@@ -31,11 +31,15 @@ alias la="ls -A"
 alias ll="ls -lAh"
 alias lsl="ls -lAh | less"
 alias odx="od -t x1z"
+alias asdf="setxkbmap us colemak"
 
 # functions
 function reboot-to-windows {
-    # this should maybe be a script idk
     WINDOWS_TITLE=`sudo grep -i 'windows' /boot/grub/grub.cfg|cut -d"'" -f2`
     sudo grub-reboot "$WINDOWS_TITLE"
     sudo reboot
+}
+
+function mkcd {
+	mkdir $1 && cd $1
 }
