@@ -1,4 +1,4 @@
-#!/bin/zsh
+##!/bin/sh
 
 if [ -f /etc/profile ] ; then 
 	source /etc/profile
@@ -8,13 +8,20 @@ fi
 export LANG='en_US.UTF-8'
 
 PATH=${PATH}:~/.local/bin
-PATH=${PATH}:~/.cargo/bin
-PATH=${PATH}:~/.gem/ruby/2.7.0/bin:/usr/lib/ruby/gems/2.7.0/
-PATH=${PATH}:~/.cabal/bin
-# TODO fix this and make it better (check if ruby is installed lol)
-# PATH=${PATH}:~/.gem/ruby/$(ruby -v | grep -Po '\d+\.\d+\.\d+')/bin
-export PATH
+if [ -d ~/.cargo ] ; then
+    PATH=${PATH}:~/.cargo/bin
+fi
+if [ -d ~/.cabal ] ; then
+    PATH=${PATH}:~/.cabal/bin
+fi
+if [ -d ~/.local/share/context ] ; then
+    PATH=${PATH}:~/.local/share/context/tex/texmf-linuxmusl/bin
+fi
+if [ $(command -v ruby) ] ; then
+    PATH=${PATH}:~/.gem/ruby/$(ruby -v | grep -E -o '\d+\.\d+\.\d+')/bin
+fi
 
+export PATH
 
 export EDITOR='kak'
 
