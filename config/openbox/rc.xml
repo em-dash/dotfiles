@@ -194,7 +194,7 @@
       <action name="Execute"><command>rofi -show run</command></action>
   </keybind>
   <keybind key="W-Return">
-      <action name="Execute"><command>kitty</command></action>
+      <action name="Execute"><command>alacritty</command></action>
   </keybind>
   <keybind key="W-u">
       <action name="ToggleMaximize" />
