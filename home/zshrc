@@ -12,10 +12,6 @@ unsetopt beep
 #bindkey -e
 
 
-
-
-
-
 zstyle :compinstall filename '/home/mew/.zshrc'
 autoload -Uz compinit
 compinit
@@ -41,5 +37,15 @@ function reboot-to-windows {
 }
 
 function mkcd {
-	mkdir $1 && cd $1
+	mkdir -p $1 && cd $1
 }
+
+function build_deps {
+	cd ~/aports
+	for i in $(ap recursdeps $@ | xargs ap builddirs); do
+    	cd */$i
+    	abuild -i || break
+	done
+}
+
+
