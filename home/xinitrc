@@ -12,10 +12,11 @@ xinput --set-prop "ETPS/2 Elantech Touchpad" "libinput Tapping Enabled" 1
 
 
 # brightness and volume
-xbindkeys
+#xbindkeys
 
 setxkbmap us colemak
 # make the fucking backspace repeat lmao
+xset r 66
 
 # menu > super and fix caps lock lmao
 #[ -f ~/.Xmodmap ] && xmodmap ~/.Xmodmap
