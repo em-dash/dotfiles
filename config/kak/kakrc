@@ -108,9 +108,10 @@ hook global WinSetOption filetype=zig %{
 hook global WinSetOption filetype=man %{
     # override the global highlighter
     remove-highlighter window/number_lines
+    add-highlighter window/ wrap
 
-	# TODO readonly breaks man-impl apparently idk
-#    set-option buffer readonly true
+    # TODO readonly breaks man-impl apparently idk
+    # set-option buffer readonly true
 
     map window normal n vj
     map window normal e vk
