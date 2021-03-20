@@ -12,7 +12,7 @@ unsetopt beep
 #bindkey -e
 
 
-zstyle :compinstall filename '/home/mew/.zshrc'
+zstyle :compinstall filename "~/.zshrc"
 autoload -Uz compinit
 compinit
 
@@ -22,6 +22,13 @@ PROMPT="
 %# "
 
 # aliases
+if [ ${LS_COLORS?} ] ; then
+    alias ls="ls --color=always"
+fi
+# TODO this is currently only doing color escape codes, figure out if it
+# should do all escape codes with "less -r"
+# TODO this is probably gonna break on busybox huh
+alias less="less -R"
 alias la="ls -A"
 alias ll="ls -lAh"
 alias lsl="ls -lAh | less"
@@ -38,13 +45,3 @@ function reboot-to-windows {
 function mkcd {
 	mkdir -p $1 && cd $1
 }
-
-function build_deps {
-	cd ~/aports
-	for i in $(ap recursdeps $@ | xargs ap builddirs); do
-    	cd */$i
-    	abuild -i || break
-	done
-}
-
-

@@ -32,7 +32,7 @@ export GITHUBMAIL='33614480+em-dash@users.noreply.github.com'
 # idk if there is a sensible way to make this always work
 # i'm gonna at least test if dircolors exists
 if [ $(command -v dircolors) ] ; then
-    eval $(dircolors)
+    eval $(dircolors ~/.lscolors)
 fi
 
 
