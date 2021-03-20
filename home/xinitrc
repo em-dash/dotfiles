@@ -8,7 +8,7 @@
 
 
 # brightness and volume
-#xbindkeys
+xbindkeys
 
 setxkbmap us colemak
 # make the fucking backspace repeat lmao
