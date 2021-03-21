@@ -27,6 +27,8 @@ export EDITOR='kak'
 
 export GITHUBMAIL='33614480+em-dash@users.noreply.github.com'
 
+export LESS='R'
+
 
 # this is from coreutils
 # idk if there is a sensible way to make this always work

@@ -28,7 +28,6 @@ fi
 # TODO this is currently only doing color escape codes, figure out if it
 # should do all escape codes with "less -r"
 # TODO this is probably gonna break on busybox huh
-alias less="less -R"
 alias la="ls -A"
 alias ll="ls -lAh"
 alias lsl="ls -lAh | less"
