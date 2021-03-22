@@ -9,7 +9,9 @@ plug "Vurich/ranger-kak"
 
 # plug "alexherbo2/prelude.kak"
 # plug "alexherbo2/auto-pairs.kak" # this has problems
-
+plug andreyorst/smarttab.kak config smarttab %{
+    set-option global softtabstop 4
+}
 
 map global normal n j
 map global normal N J
@@ -58,16 +60,7 @@ map global tags p :ctags-generate<ret> -docstring "(re)generate tags"
 #     try ctags-update-tags
 # }
 
-# TODO figure out if/how kakoune changed lol and then do a better solution
-#define-command -hidden set-soft-tabs %{
-#    hook global InsertChar \t %{ try %{
-#          execute-keys -draft "h<a-h><a-k>\A\h+\z<ret><a-;>;%opt{indentwidth}@"
-#    }}
-#
-#    hook global InsertDelete ' ' %{ try %{
-#          execute-keys -draft 'h<a-h><a-k>\A\h+\z<ret>i<space><esc><lt>'
-#    }}
-#}
+
 
 
 set-option global indentwidth 4
@@ -80,9 +73,11 @@ hook global WinSetOption filetype=c %{
 
     set-option window indentwidth 4
     set-option window tabstop 4
-    # set-soft-tabs
+    set-option window softtabstop 4
+    expandtab
 
 	set window textwidth 80
+	# TODO make this highlight a command and reuse that
     add-highlighter window/ column '%opt{textwidth}' default,bright-black
 }
 
@@ -91,7 +86,7 @@ hook global WinSetOption filetype=rust %{
 
     set-option window indentwidth 4
     set-option window tabstop 4
-    # set-soft-tabs
+	expandtab
 
 	set window textwidth 99
     add-highlighter window/ column '%opt{textwidth}' default,bright-black
@@ -101,6 +96,7 @@ hook global WinSetOption filetype=rust %{
 
 hook global WinSetOption filetype=zig %{
     set buffer makecmd "zig build-exe %val{buffile}"
+    expandtab
 }
 
 # read only
