@@ -188,6 +188,14 @@
 </dock>
 
 <keyboard>
+  <!--
+    !!! NOTE !!!
+    openbox completely ignores the standard names for modifiers lol
+    C = control
+    A = alt
+    S = shift
+    W = super/OS key
+  -->
   <chainQuitKey>C-g</chainQuitKey>
 
   <keybind key="W-space">
@@ -199,30 +207,60 @@
   <keybind key="W-u">
       <action name="ToggleMaximize" />
   </keybind>
+  <keybind key="XF86MonBrightnessUp">
+      <action name="Execute"><command>light -A 4</command></action>
+  </keybind>
+  <keybind key="XF86MonBrightnessDown">
+      <action name="Execute"><command>light -U 4</command></action>
+  </keybind>
 
   <!-- Keybindings for desktop switching -->
-  <keybind key="C-A-Left">
+  <keybind key="C-W-Left">
     <action name="GoToDesktop"><to>left</to><wrap>no</wrap></action>
   </keybind>
-  <keybind key="C-A-Right">
+  <keybind key="C-W-Right">
     <action name="GoToDesktop"><to>right</to><wrap>no</wrap></action>
   </keybind>
-  <keybind key="C-A-Up">
+  <keybind key="C-W-Up">
     <action name="GoToDesktop"><to>up</to><wrap>no</wrap></action>
   </keybind>
-  <keybind key="C-A-Down">
+  <keybind key="C-W-Down">
     <action name="GoToDesktop"><to>down</to><wrap>no</wrap></action>
   </keybind>
-  <keybind key="S-A-Left">
+  <keybind key="S-W-Left">
     <action name="SendToDesktop"><to>left</to><wrap>no</wrap></action>
   </keybind>
-  <keybind key="S-A-Right">
+  <keybind key="S-W-Right">
     <action name="SendToDesktop"><to>right</to><wrap>no</wrap></action>
   </keybind>
-  <keybind key="S-A-Up">
+  <keybind key="S-W-Up">
     <action name="SendToDesktop"><to>up</to><wrap>no</wrap></action>
   </keybind>
-  <keybind key="S-A-Down">
+  <keybind key="S-W-Down">
+    <action name="SendToDesktop"><to>down</to><wrap>no</wrap></action>
+  </keybind>
+  <keybind key="C-W-h">
+    <action name="GoToDesktop"><to>left</to><wrap>no</wrap></action>
+  </keybind>
+  <keybind key="C-W-i">
+    <action name="GoToDesktop"><to>right</to><wrap>no</wrap></action>
+  </keybind>
+  <keybind key="C-W-e">
+    <action name="GoToDesktop"><to>up</to><wrap>no</wrap></action>
+  </keybind>
+  <keybind key="C-W-n">
+    <action name="GoToDesktop"><to>down</to><wrap>no</wrap></action>
+  </keybind>
+  <keybind key="S-W-h">
+    <action name="SendToDesktop"><to>left</to><wrap>no</wrap></action>
+  </keybind>
+  <keybind key="S-W-i">
+    <action name="SendToDesktop"><to>right</to><wrap>no</wrap></action>
+  </keybind>
+  <keybind key="S-W-e">
+    <action name="SendToDesktop"><to>up</to><wrap>no</wrap></action>
+  </keybind>
+  <keybind key="S-W-n">
     <action name="SendToDesktop"><to>down</to><wrap>no</wrap></action>
   </keybind>
   <keybind key="W-F1">
