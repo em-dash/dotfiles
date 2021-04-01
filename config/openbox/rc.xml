@@ -213,6 +213,10 @@
   <keybind key="XF86MonBrightnessDown">
       <action name="Execute"><command>light -U 4</command></action>
   </keybind>
+  <keybind key="XF86Sleep">
+      <!-- TODO this is bad -->
+      <action name="Execute"><command>sudo pm-suspend</command></action>
+  </keybind>
 
   <!-- Keybindings for desktop switching -->
   <keybind key="C-W-Left">
