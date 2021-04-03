@@ -1,20 +1,8 @@
 
-#xinput --set-prop "Elan Touchpad" "libinput Tapping Enabled" 1
-#xinput --set-prop "Logitech Wireless Mouse" "libinput Accel Profile Enabled" 0, 0
-#xinput --set-prop "Logitech Wireless Mouse" "Coordinate Transformation Matrix" 0.35, 0.0, 0.0, 0.0, 0.35, 0.0, 0.0, 0.0, 1.0
-#xinput --set-prop "Kingsis Peripherals ZOWIE Gaming mouse" "Coordinate Transformation Matrix" 0.35, 0.0, 0.0, 0.0, 0.35, 0.0, 0.0, 0.0, 1.0
-#xinput --set-prop "ETPS/2 Elantech Touchpad" "libinput Tapping Enabled" 1
-
-
-
 # brightness and volume
 xbindkeys
 
-setxkbmap us colemak
-# make the fucking backspace repeat lmao
-xset r 66
-
-# menu > super and fix caps lock lmao
-#[ -f ~/.Xmodmap ] && xmodmap ~/.Xmodmap
-
 exec openbox
+
+
+
