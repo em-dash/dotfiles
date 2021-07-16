@@ -23,7 +23,7 @@ fi
 
 export PATH
 
-export EDITOR='kak'
+export EDITOR='nvim'
 
 export GITHUBMAIL='33614480+em-dash@users.noreply.github.com'
 
