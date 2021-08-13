@@ -6,6 +6,8 @@ Plug 'https://github.com/fnune/base16-vim'
 
 call plug#end()
 
+" colors
+colorscheme base16-gruvbox-dark-pale
 
 noremap n j
 noremap N J
