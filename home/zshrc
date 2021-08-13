@@ -9,7 +9,7 @@ SAVEHIST=10000
 setopt interactivecomments
 # setopt appendhistory extendedglob
 unsetopt beep
-#bindkey -e
+bindkey -e
 
 
 zstyle :compinstall filename "~/.zshrc"
