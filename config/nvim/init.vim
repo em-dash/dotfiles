@@ -31,6 +31,8 @@ noremap <C-w>l <nop>
 
 
 
+set number
+
 
 
 
