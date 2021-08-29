@@ -6,8 +6,26 @@ Plug 'https://github.com/fnune/base16-vim'
 
 call plug#end()
 
+
+filetype plugin indent on
+
 " colors
 colorscheme base16-gruvbox-dark-pale
+
+" maybe i just fucking have to write an indentexpr because all of this is
+" horrible argh
+
+" smartindent is evil for any language that isn't C because it fucks up
+" hashtags at the start of lines
+set nosmartindent
+set autoindent
+set textwidth=0
+set colorcolumn=+0
+
+" mappings
+noremap <space>m K
+
+nnoremap U <c-r>
 
 noremap n j
 noremap N J
@@ -15,7 +33,7 @@ noremap j n
 noremap J N
 
 noremap e k
-noremap E K
+noremap E <nop>
 noremap l e
 noremap L E
 
@@ -46,5 +64,4 @@ set nohlsearch
 set number
 
 
-
-
+" jesus lord indenting sucks
