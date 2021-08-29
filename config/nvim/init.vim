@@ -1,4 +1,14 @@
 
+" plugins
+call plug#begin(stdpath('data') . '/user_plugins')
+
+Plug 'https://github.com/fnune/base16-vim'
+
+call plug#end()
+
+" colors
+colorscheme base16-gruvbox-dark-pale
+
 noremap n j
 noremap N J
 noremap j n
@@ -31,8 +41,9 @@ noremap <C-w>l <nop>
 
 
 
-set number
 
+set nohlsearch
+set number
 
 
 
