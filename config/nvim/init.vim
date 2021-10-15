@@ -2,16 +2,23 @@
 " plugins
 call plug#begin(stdpath('data') . '/user_plugins')
 
+" themes
 Plug 'https://github.com/fnune/base16-vim'
+
+"languages
+Plug 'https://github.com/tikhomirov/vim-glsl', { 'for': 'glsl' }
+Plug 'https://github.com/ziglang/zig.vim', { 'for': 'zig' }
 
 call plug#end()
 
 
-filetype plugin indent on
 
 " colors
 colorscheme base16-gruvbox-dark-pale
 
+
+
+filetype plugin indent on
 " maybe i just fucking have to write an indentexpr because all of this is
 " horrible argh
 
@@ -21,9 +28,14 @@ set nosmartindent
 set autoindent
 set textwidth=0
 set colorcolumn=+0
+set tabstop=4
+set shiftwidth=4
+set expandtab
 
 " mappings
-noremap <space>m K
+noremap <space>mk K
+noremap <space>mm :Man<space>
+noremap <space>w :w<return>
 
 nnoremap U <c-r>
 
@@ -39,8 +51,8 @@ noremap L E
 
 noremap i l
 noremap I L
-nnoremap k i
-nnoremap K I
+noremap k i
+noremap K I
 
 noremap gn gj
 noremap ge gk
@@ -57,8 +69,10 @@ noremap <C-w>j <nop>
 noremap <C-w>k <nop>
 noremap <C-w>l <nop>
 
+tnoremap <Esc> <C-\><C-n>
 
-
+" make word i just typed uppercase
+map! <C-F> <Esc>gUkw`]a
 
 set nohlsearch
 set number

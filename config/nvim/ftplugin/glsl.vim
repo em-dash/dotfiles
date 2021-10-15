@@ -1,4 +1,6 @@
 
+let b:did_ftplugin=1
+
 " absolutely evil
 set nocindent
 
@@ -7,4 +9,9 @@ set nocindent
 set autoindent
 set smartindent
 
-let b:did_indent=1
+setlocal tabstop=4
+setlocal shiftwidth=4
+setlocal expandtab
+
+setlocal textwidth=80
+
