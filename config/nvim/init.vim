@@ -22,7 +22,7 @@ filetype plugin indent on
 " maybe i just fucking have to write an indentexpr because all of this is
 " horrible argh
 
-" smartindent is evil for any language that isn't C because it fucks up
+" smartindent is evil for various languages that aren't C because it fucks up
 " hashtags at the start of lines
 set nosmartindent
 set autoindent
@@ -32,10 +32,17 @@ set tabstop=4
 set shiftwidth=4
 set expandtab
 
+
 " mappings
 noremap <space>mk K
 noremap <space>mm :Man<space>
 noremap <space>w :w<return>
+
+noremap <space>ta :tabnew<return>
+noremap <space>tr :tabnew<bar>term<return>
+" next, previous tab
+noremap <space>ti gt
+noremap <space>th gT
 
 nnoremap U <c-r>
 
