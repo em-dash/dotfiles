@@ -9,8 +9,7 @@ SAVEHIST=10000
 setopt interactivecomments
 # setopt appendhistory extendedglob
 unsetopt beep
-# bindkey -e
-bindkey -v
+bindkey -e
 
 
 zstyle :compinstall filename "~/.zshrc"
@@ -20,21 +19,22 @@ compinit
 # prompt (i would like to apologize to my future self)
 # this unholy order is because of base16 colors
 # TODO maybe detect if base16 colors is a thing and if not use the regular order
-promptcolors=("1" "9" "3" "2" "6" "4" "5" "14")
+#promptcolors=("1" "9" "3" "2" "6" "4" "5" "14")
+promptcolors=("1" "9" "3" "2" "6" "4" "14")
 # apparently arrays are 1-indexed what the fuck?
 coloruser=${promptcolors[$(( (RANDOM % 8) + 1 ))]}
-colorhost=${promptcolors[$(( (RANDOM % 8) + 1 ))]}
-while [[ $coloruser == $colorhost ]]
-do # this is quite bad
-    colorhost=${promptcolors[$(( (RANDOM % 8) + 1 ))]}
-done
+#colorhost=${promptcolors[$(( (RANDOM % 8) + 1 ))]}
+#while [[ $coloruser == $colorhost ]]
+#do # this is quite bad
+#    colorhost=${promptcolors[$(( (RANDOM % 8) + 1 ))]}
+#done
 
 PROMPT="
-%F{${coloruser}}%n%f%F{7}@%f%F{${colorhost}}%m%f %F{15}%~%f
+%F{${coloruser}}%n%f%F{7}@%f%F{5}%m%f %F{15}%~%f
 %# "
 unset promptcolors
 unset coloruser
-unset colorhost
+#unset colorhost
 
 # aliases
 if [ ${LS_COLORS?} ] ; then
