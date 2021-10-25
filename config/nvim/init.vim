@@ -76,7 +76,7 @@ noremap <C-w>j <nop>
 noremap <C-w>k <nop>
 noremap <C-w>l <nop>
 
-tnoremap <Esc> <C-\><C-n>
+tnoremap <C-\> <C-\><C-n>
 
 " make word i just typed uppercase
 map! <C-F> <Esc>gUkw`]a
