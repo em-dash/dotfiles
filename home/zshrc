@@ -22,7 +22,7 @@ compinit
 #promptcolors=("1" "9" "3" "2" "6" "4" "5" "14")
 promptcolors=("1" "9" "3" "2" "6" "4" "14")
 # apparently arrays are 1-indexed what the fuck?
-coloruser=${promptcolors[$(( (RANDOM % 8) + 1 ))]}
+coloruser=${promptcolors[$(( (RANDOM % 7) + 1 ))]}
 #colorhost=${promptcolors[$(( (RANDOM % 8) + 1 ))]}
 #while [[ $coloruser == $colorhost ]]
 #do # this is quite bad
