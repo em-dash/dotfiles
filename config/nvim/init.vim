@@ -55,6 +55,8 @@ noremap e k
 noremap E <nop>
 noremap l e
 noremap L E
+noremap gl ge
+noremap gL gE
 
 noremap i l
 noremap I L
