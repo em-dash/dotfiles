@@ -5,9 +5,12 @@ call plug#begin(stdpath('data') . '/user_plugins')
 " themes
 Plug 'https://github.com/fnune/base16-vim'
 
-"languages
+" languages
 Plug 'https://github.com/tikhomirov/vim-glsl', { 'for': 'glsl' }
 Plug 'https://github.com/ziglang/zig.vim', { 'for': 'zig' }
+
+" useability
+Plug 'https://github.com/liuchengxu/vim-which-key'  " set this up i guess
 
 call plug#end()
 
@@ -77,6 +80,12 @@ noremap <C-w>i <C-w>l
 noremap <C-w>j <nop>
 noremap <C-w>k <nop>
 noremap <C-w>l <nop>
+noremap <C-w>N <C-w>J
+noremap <C-w>E <C-w>K
+noremap <C-w>I <C-w>L
+noremap <C-w>J <nop>
+noremap <C-w>K <nop>
+noremap <C-w>L <nop>
 
 tnoremap <C-\> <C-\><C-n>
 
