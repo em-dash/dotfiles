@@ -2,7 +2,7 @@
 # brightness and volume
 xbindkeys
 
-exec openbox
+exec awesome
 
 
 
