@@ -9,8 +9,11 @@ Plug 'https://github.com/fnune/base16-vim'
 Plug 'https://github.com/tikhomirov/vim-glsl', { 'for': 'glsl' }
 Plug 'https://github.com/ziglang/zig.vim', { 'for': 'zig' }
 
-" useability
+" workflow or something idk
 Plug 'https://github.com/liuchengxu/vim-which-key'  " set this up i guess
+Plug 'https://github.com/vim-scripts/scratch.vim'
+
+Plug 'https://github.com/tpope/vim-commentary'
 
 call plug#end()
 
@@ -30,7 +33,7 @@ filetype plugin indent on
 set nosmartindent
 set autoindent
 set textwidth=0
-set colorcolumn=+0
+set colorcolumn=+1
 set tabstop=4
 set shiftwidth=4
 set expandtab
@@ -93,7 +96,7 @@ tnoremap <C-\> <C-\><C-n>
 map! <C-F> <Esc>gUkw`]a
 
 set nohlsearch
-set number
+" set number
 
 
 " jesus lord indenting sucks

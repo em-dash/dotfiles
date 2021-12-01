@@ -63,7 +63,7 @@
   <animateIconify>yes</animateIconify>
   <font place="ActiveWindow">
     <name>sans</name>
-    <size>8</size>
+    <size>14</size>
     <!-- font size in points -->
     <weight>bold</weight>
     <!-- 'bold' or 'normal' -->
@@ -72,7 +72,7 @@
   </font>
   <font place="InactiveWindow">
     <name>sans</name>
-    <size>8</size>
+    <size>14</size>
     <!-- font size in points -->
     <weight>bold</weight>
     <!-- 'bold' or 'normal' -->
@@ -204,7 +204,7 @@
   <keybind key="W-Return">
       <action name="Execute"><command>alacritty</command></action>
   </keybind>
-  <keybind key="W-u">
+  <keybind key="W-x">
       <action name="ToggleMaximize" />
   </keybind>
   <keybind key="XF86MonBrightnessUp">
@@ -214,8 +214,7 @@
       <action name="Execute"><command>light -U 4</command></action>
   </keybind>
   <keybind key="XF86Sleep">
-      <!-- TODO this is bad -->
-      <action name="Execute"><command>sudo pm-suspend</command></action>
+      <!-- TODO figure out a way to do this -->
   </keybind>
 
   <!-- Keybindings for desktop switching -->
