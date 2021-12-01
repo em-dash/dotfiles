@@ -3,7 +3,7 @@ configuration {
 /*	width: 50;*/
 /*	lines: 15;*/
 /*	columns: 1;*/
-	font: "Open Dyslexic 18";
+	font: "OpenDyslexic3 18";
 /*	bw: 1;*/
 /*	location: 0;*/
 /*	padding: 5;*/
@@ -55,8 +55,10 @@ configuration {
 /*	window-format: "{w}    {c}   {t}";*/
 /*	click-to-exit: true;*/
 /*	show-match: true;*/
+
 /* path relative to $HOME apparently, not sure if this is a good idea */
-	theme: ".config/rofi/base16-rofi/themes/base16-bespin.rasi"; 
+/*	theme: ".config/rofi/base16-rofi/themes/base16-bespin.rasi";  */
+
 /*	color-normal: ;*/
 /*	color-urgent: ;*/
 /*	color-active: ;*/
@@ -151,3 +153,5 @@ configuration {
 /*	me-accept-entry: "MouseDPrimary";*/
 /*	me-accept-custom: "Control+MouseDPrimary";*/
 }
+/* @theme ".config/rofi/base16-rofi/themes/base16-bespin.rasi"; */
+@theme "base16-rofi/themes/base16-gruvbox-dark-pale.rasi"
