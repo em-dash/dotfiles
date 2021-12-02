@@ -10,6 +10,8 @@ require("awful.autofocus")
 local wibox = require("wibox")
 -- Theme handling library
 local beautiful = require("beautiful")
+local dpi = require("beautiful.xresources").apply_dpi
+-- local dpi = xresources.apply_dpi
 -- Notification library
 local naughty = require("naughty")
 local menubar = require("menubar")
@@ -45,7 +47,7 @@ end
 
 -- {{{ Variable definitions
 -- Themes define colours, icons, font and wallpapers.
-beautiful.init(gears.filesystem.get_themes_dir() .. "default/theme.lua")
+beautiful.init("~/.config/awesome/themes/default/theme.lua")
 
 -- This is used later as the default terminal and editor to run.
 terminal = "alacritty"
@@ -169,7 +171,8 @@ awful.screen.connect_for_each_screen(function(s)
     set_wallpaper(s)
 
     -- Each screen has its own tag table.
-    awful.tag({ "1", "2", "3", "4", "5", "6", "7", "8", "9" }, s, awful.layout.layouts[1])
+    -- awful.tag({ "1", "2", "3", "4", "5", "6", "7", "8", "9" }, s, awful.layout.layouts[1])
+    awful.tag({ "1", "2", "3", "4", }, s, awful.layout.layouts[1])
 
     -- Create a promptbox for each screen
     s.mypromptbox = awful.widget.prompt()
@@ -185,18 +188,88 @@ awful.screen.connect_for_each_screen(function(s)
     s.mytaglist = awful.widget.taglist {
         screen  = s,
         filter  = awful.widget.taglist.filter.all,
-        buttons = taglist_buttons
+        buttons = taglist_buttons,
+        -- layout = {
+        --     layout = wibox.layout.flex.horizontal,
+        -- },
+        -- TODO i think this means the 
+        widget_template = {
+            {
+                {
+                    {
+                        {
+                            id = "text_role",
+                            widget = wibox.widget.textbox,
+                        },
+                        halign = 'center',
+                        widget = wibox.container.place,
+                    },
+                    top = dpi(6),
+                    bottom = dpi(6),
+                    -- left = dpi(12),
+                    -- right = dpi(12),
+                    widget = wibox.container.margin,
+                },
+                -- layout = wibox.layout.fixed.horizontal,
+                forced_width = dpi(32),
+                layout = wibox.layout.flex.horizontal,
+            },
+            id = "background_role",
+            widget = wibox.container.background,
+        },
     }
 
     -- Create a tasklist widget
     s.mytasklist = awful.widget.tasklist {
         screen  = s,
         filter  = awful.widget.tasklist.filter.currenttags,
-        buttons = tasklist_buttons
+        buttons = tasklist_buttons,
+        style = {
+            shape_border_width = dpi(1),
+            shape_border_color = '#555555',
+            shape = gears.shape.rectangle,
+        },
+        layout = {
+            layout = wibox.layout.flex.horizontal,
+            max_widget_size = dpi(360),
+        },
+        widget_template = {
+            {
+                {
+                    {
+                        {
+                            id     = 'icon_role',
+                            widget = wibox.widget.imagebox,
+                        },
+                        top = dpi(5),
+                        bottom = dpi(5),
+                        -- left = dpi(12),
+                        right = dpi(16),
+                        widget  = wibox.container.margin,
+                    },
+                    {
+                        id     = 'text_role',
+                        widget = wibox.widget.textbox,
+                    },
+                    layout = wibox.layout.fixed.horizontal,
+                },
+                left  = dpi(20),
+                right = dpi(20),
+                top = dpi(6),
+                bottom = dpi(6),
+                widget = wibox.container.margin
+            },
+            id     = 'background_role',
+            widget = wibox.container.background,
+        },
     }
 
     -- Create the wibox
-    s.mywibox = awful.wibar({ position = "top", screen = s })
+    s.mywibox = awful.wibar({
+        position = "bottom",
+        screen = s,
+        border_width = dpi(0),
+    })
 
     -- Add widgets to the wibox
     s.mywibox:setup {
@@ -238,13 +311,13 @@ globalkeys = gears.table.join(
     awful.key({ modkey,           }, "Escape", awful.tag.history.restore,
               {description = "go back", group = "tag"}),
 
-    awful.key({ modkey,           }, "j",
+    awful.key({ modkey,           }, "c",
         function ()
             awful.client.focus.byidx( 1)
         end,
         {description = "focus next by index", group = "client"}
     ),
-    awful.key({ modkey,           }, "k",
+    awful.key({ modkey,           }, "x",
         function ()
             awful.client.focus.byidx(-1)
         end,
@@ -254,16 +327,17 @@ globalkeys = gears.table.join(
               {description = "show main menu", group = "awesome"}),
 
     -- Layout manipulation
-    awful.key({ modkey, "Shift"   }, "j", function () awful.client.swap.byidx(  1)    end,
-              {description = "swap with next client by index", group = "client"}),
-    awful.key({ modkey, "Shift"   }, "k", function () awful.client.swap.byidx( -1)    end,
-              {description = "swap with previous client by index", group = "client"}),
-    awful.key({ modkey, "Control" }, "j", function () awful.screen.focus_relative( 1) end,
-              {description = "focus the next screen", group = "screen"}),
-    awful.key({ modkey, "Control" }, "k", function () awful.screen.focus_relative(-1) end,
-              {description = "focus the previous screen", group = "screen"}),
-    awful.key({ modkey,           }, "u", awful.client.urgent.jumpto,
-              {description = "jump to urgent client", group = "client"}),
+    -- awful.key({ modkey, "Shift"   }, "j", function () awful.client.swap.byidx(  1)    end,
+    --           {description = "swap with next client by index", group = "client"}),
+    -- awful.key({ modkey, "Shift"   }, "k", function () awful.client.swap.byidx( -1)    end,
+    --           {description = "swap with previous client by index", group = "client"}),
+    -- awful.key({ modkey, "Control" }, "j", function () awful.screen.focus_relative( 1) end,
+    --           {description = "focus the next screen", group = "screen"}),
+    -- awful.key({ modkey, "Control" }, "k", function () awful.screen.focus_relative(-1) end,
+    --           {description = "focus the previous screen", group = "screen"}),
+    -- awful.key({ modkey,           }, "u", awful.client.urgent.jumpto,
+    --           {description = "jump to urgent client", group = "client"}),
+    -- ??????
     awful.key({ modkey,           }, "Tab",
         function ()
             awful.client.focus.history.previous()
@@ -314,16 +388,16 @@ globalkeys = gears.table.join(
     awful.key({ modkey },        "space",     function () awful.screen.focused().mypromptbox:run() end,
               {description = "run prompt", group = "launcher"}),
 
-    awful.key({ modkey }, "x",
-              function ()
-                  awful.prompt.run {
-                    prompt       = "Run Lua code: ",
-                    textbox      = awful.screen.focused().mypromptbox.widget,
-                    exe_callback = awful.util.eval,
-                    history_path = awful.util.get_cache_dir() .. "/history_eval"
-                  }
-              end,
-              {description = "lua execute prompt", group = "awesome"}),
+    -- awful.key({ modkey }, "x",
+    --           function ()
+    --               awful.prompt.run {
+    --                 prompt       = "Run Lua code: ",
+    --                 textbox      = awful.screen.focused().mypromptbox.widget,
+    --                 exe_callback = awful.util.eval,
+    --                 history_path = awful.util.get_cache_dir() .. "/history_eval"
+    --               }
+    --           end,
+    --           {description = "lua execute prompt", group = "awesome"}),
     -- Menubar
     awful.key({ modkey }, "p", function() menubar.show() end,
               {description = "show the menubar", group = "launcher"})
@@ -336,8 +410,8 @@ clientkeys = gears.table.join(
             c:raise()
         end,
         {description = "toggle fullscreen", group = "client"}),
-    awful.key({ modkey, "Shift"   }, "c",      function (c) c:kill()                         end,
-              {description = "close", group = "client"}),
+    -- awful.key({ modkey, "Shift"   }, "c",      function (c) c:kill()                         end,
+    --           {description = "close", group = "client"}),
     -- TODO i guess somethign else for switching layouts
     -- awful.key({ modkey, "Control" }, "space",  awful.client.floating.toggle                     ,
     --           {description = "toggle floating", group = "client"}),
