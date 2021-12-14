@@ -2,7 +2,7 @@
 let b:did_ftplugin=1
 
 " absolutely evil
-set nocindent
+" set nocindent
 
 " TODO this handles indentation after a c /* */ style comment by lining it up
 " with the auto asterisks. yike.

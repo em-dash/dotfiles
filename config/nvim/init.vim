@@ -12,12 +12,14 @@ Plug 'https://github.com/ziglang/zig.vim', { 'for': 'zig' }
 " workflow or something idk
 Plug 'https://github.com/liuchengxu/vim-which-key'  " set this up i guess
 Plug 'https://github.com/vim-scripts/scratch.vim'
+Plug 'https://github.com/luochen1990/rainbow'
 
 Plug 'https://github.com/tpope/vim-commentary'
 
 call plug#end()
 
-
+" TODO this should probably go somewhere else
+autocmd FileType zig setlocal commentstring=//\ %s
 
 " colors
 colorscheme base16-gruvbox-dark-pale
@@ -37,6 +39,9 @@ set colorcolumn=+1
 set tabstop=4
 set shiftwidth=4
 set expandtab
+" override this in filetypes that need it, eg plain text, TeX
+set nowrap
+" TODO make wrapping look nicer and more clear
 
 
 " mappings
@@ -49,6 +54,8 @@ noremap <space>tr :tabnew<bar>term<return>
 " next, previous tab
 noremap <space>ti gt
 noremap <space>th gT
+
+noremap <space>ar :RainbowToggle<return>
 
 nnoremap U <c-r>
 
