@@ -14,11 +14,12 @@ fi
 if [ -d ~/.cabal ] ; then
     PATH=${PATH}:~/.cabal/bin
 fi
-if [ -d ~/.local/share/context ] ; then
-    PATH=${PATH}:~/.local/share/context/tex/texmf-linuxmusl/bin
-fi
+# TODO honey i don't think you thought this one through
+# if [ -d ~/.local/share/context ] ; then
+#     PATH=${PATH}:~/.local/share/context/tex/texmf-linuxmusl/bin
+# fi
 if [ $(command -v ruby) ] ; then
-    PATH=${PATH}:~/.gem/ruby/$(ruby -v | grep -E -o '\d+\.\d+\.\d+')/bin
+    PATH=${PATH}:~/.gem/ruby/$(ruby -v | grep -P -o '\d+\.\d+\.\d+')/bin
 fi
 
 export PATH
@@ -28,6 +29,8 @@ export EDITOR='nvim'
 export GITHUBMAIL='33614480+em-dash@users.noreply.github.com'
 
 export LESS='R'
+
+export PYTHONSTARTUP=~/.dotfiles/scripts/friendly.py
 
 
 # this is from coreutils
