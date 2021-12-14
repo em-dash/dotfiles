@@ -31,6 +31,7 @@ theme.border_width  = dpi(1)
 theme.border_normal = "#000000"
 theme.border_focus  = "#535d6c"
 theme.border_marked = "#91231c"
+theme.maximized_hide_border = true
 
 theme.tasklist_plain_task_name = true
 
