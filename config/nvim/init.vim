@@ -20,6 +20,7 @@ call plug#end()
 
 " TODO this should probably go somewhere else
 autocmd FileType zig setlocal commentstring=//\ %s
+let g:zig_fmt_autosave = 0
 
 " colors
 colorscheme base16-gruvbox-dark-pale
@@ -97,7 +98,7 @@ noremap <C-w>J <nop>
 noremap <C-w>K <nop>
 noremap <C-w>L <nop>
 
-tnoremap <C-\> <C-\><C-n>
+tnoremap <Esc> <C-\><C-n>
 
 " make word i just typed uppercase
 map! <C-F> <Esc>gUkw`]a

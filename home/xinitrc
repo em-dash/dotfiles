@@ -1,6 +1,6 @@
 
 # brightness and volume
-# xbindkeys
+xbindkeys
 
 setxkbmap us colemak
 xset r 66  # backspace (on capslock key) does not repeat by default

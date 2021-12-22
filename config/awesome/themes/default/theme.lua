@@ -13,7 +13,7 @@ local theme = {}
 
 -- theme.font          = "sans 18"
 -- theme.font          = "OpenDyslexic3 14"
-theme.font = "Averia Libre 20"
+theme.font = "Averia Libre 15"
 
 theme.bg_normal     = "#222222"
 theme.bg_focus      = "#535d6c"

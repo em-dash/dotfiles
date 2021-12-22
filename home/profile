@@ -19,7 +19,9 @@ fi
 #     PATH=${PATH}:~/.local/share/context/tex/texmf-linuxmusl/bin
 # fi
 if [ $(command -v ruby) ] ; then
-    PATH=${PATH}:~/.gem/ruby/$(ruby -v | grep -P -o '\d+\.\d+\.\d+')/bin
+#     PATH=${PATH}:~/.gem/ruby/$(ruby -v | grep -P -o '\d+\.\d+\.\d+')/bin
+export GEM_HOME="$(ruby -e 'puts Gem.user_dir')"
+export PATH="$PATH:$GEM_HOME/bin"
 fi
 
 export PATH

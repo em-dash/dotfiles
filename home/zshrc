@@ -17,11 +17,11 @@ autoload -Uz compinit
 compinit
 
 # prompt (i would like to apologize to my future self)
-# this unholy order is because of base16 colors
+# this order is because of base16 colors
 # TODO maybe detect if base16 colors is a thing and if not use the regular order
 #promptcolors=("1" "9" "3" "2" "6" "4" "5" "14")
 promptcolors=("1" "9" "3" "2" "6" "4" "14")
-# apparently arrays are 1-indexed what the fuck?
+# arrays are 1-indexed?
 coloruser=${promptcolors[$(( (RANDOM % 7) + 1 ))]}
 #colorhost=${promptcolors[$(( (RANDOM % 8) + 1 ))]}
 #while [[ $coloruser == $colorhost ]]
@@ -48,6 +48,7 @@ alias ll="ls -lAh"
 alias lsl="ls -lAh | less"
 alias odx="od -t x1z"
 alias asdf="setxkbmap us colemak"
+alias quit="exit"
 
 # functions
 function reboot-to-windows {

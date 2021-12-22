@@ -224,14 +224,14 @@ awful.screen.connect_for_each_screen(function(s)
         screen  = s,
         filter  = awful.widget.tasklist.filter.currenttags,
         buttons = tasklist_buttons,
-        style = {
-            shape_border_width = dpi(1),
-            shape_border_color = '#555555',
-            shape = gears.shape.rectangle,
-        },
+        -- style = {
+        --     shape_border_width = dpi(1),
+        --     shape_border_color = '#555555',
+        --     shape = gears.shape.rectangle,
+        -- },
         layout = {
             layout = wibox.layout.flex.horizontal,
-            max_widget_size = dpi(360),
+            max_widget_size = dpi(220),
         },
         widget_template = {
             {
@@ -241,8 +241,8 @@ awful.screen.connect_for_each_screen(function(s)
                             id     = 'icon_role',
                             widget = wibox.widget.imagebox,
                         },
-                        top = dpi(5),
-                        bottom = dpi(5),
+                        top = dpi(2),
+                        bottom = dpi(2),
                         -- left = dpi(12),
                         right = dpi(16),
                         widget  = wibox.container.margin,
@@ -269,6 +269,7 @@ awful.screen.connect_for_each_screen(function(s)
         position = "bottom",
         screen = s,
         border_width = dpi(0),
+        height = dpi(34),
     })
 
     -- Add widgets to the wibox
@@ -603,7 +604,11 @@ client.connect_signal("request::titlebars", function(c)
         end)
     )
 
-    awful.titlebar(c) : setup {
+    local top_titlebar = awful.titlebar(c, {
+        size = dpi(26),
+    })
+
+    top_titlebar : setup {
         { -- Left
             awful.titlebar.widget.iconwidget(c),
             buttons = buttons,
@@ -625,7 +630,7 @@ client.connect_signal("request::titlebars", function(c)
             awful.titlebar.widget.closebutton    (c),
             layout = wibox.layout.fixed.horizontal()
         },
-        layout = wibox.layout.align.horizontal
+        layout = wibox.layout.align.horizontal,
     }
 end)
 
