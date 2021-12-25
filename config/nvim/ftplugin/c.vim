@@ -15,3 +15,5 @@ setlocal expandtab
 
 setlocal textwidth=80
 
+commentstring=//\ %s
+

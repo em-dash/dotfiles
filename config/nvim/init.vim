@@ -18,9 +18,6 @@ Plug 'https://github.com/tpope/vim-commentary'
 
 call plug#end()
 
-" TODO this should probably go somewhere else
-autocmd FileType zig setlocal commentstring=//\ %s
-let g:zig_fmt_autosave = 0
 
 " colors
 colorscheme base16-gruvbox-dark-pale
