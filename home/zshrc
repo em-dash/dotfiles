@@ -30,7 +30,7 @@ coloruser=${promptcolors[$(( (RANDOM % 7) + 1 ))]}
 #done
 
 PROMPT="
-%F{${coloruser}}%n%f%F{7}@%f%F{5}%m%f %F{15}%~%f
+%B%F{${coloruser}}%n%f%F{7}@%f%F{5}%m%f %F{15}%~%f%b
 %# "
 unset promptcolors
 unset coloruser

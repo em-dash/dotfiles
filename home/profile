@@ -1,4 +1,4 @@
-# vim: set ft=zsh:
+# vim: set ft=zsh:set textwidth=80
 
 if [ -f /etc/profile ] ; then 
 	source /etc/profile
@@ -20,8 +20,10 @@ fi
 # fi
 if [ $(command -v ruby) ] ; then
 #     PATH=${PATH}:~/.gem/ruby/$(ruby -v | grep -P -o '\d+\.\d+\.\d+')/bin
-export GEM_HOME="$(ruby -e 'puts Gem.user_dir')"
-export PATH="$PATH:$GEM_HOME/bin"
+# TODO i feel like this needs a check for if it fails somehow and if the output
+#      is good
+    export GEM_HOME="$(ruby -e 'puts Gem.user_dir')"
+    PATH=$PATH:$GEM_HOME/bin
 fi
 
 export PATH

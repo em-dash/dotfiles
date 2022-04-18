@@ -3,7 +3,8 @@
 call plug#begin(stdpath('data') . '/user_plugins')
 
 " themes
-Plug 'https://github.com/fnune/base16-vim'
+" Plug 'https://github.com/fnune/base16-vim'
+
 
 " languages
 Plug 'https://github.com/tikhomirov/vim-glsl', { 'for': 'glsl' }
@@ -20,7 +21,8 @@ call plug#end()
 
 
 " colors
-colorscheme base16-gruvbox-dark-pale
+" colorscheme base16-gruvbox-dark-pale
+" colorscheme zellner
 
 
 
