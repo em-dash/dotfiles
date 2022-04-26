@@ -13,7 +13,6 @@ Plug 'https://github.com/ziglang/zig.vim', { 'for': 'zig' }
 " workflow or something idk
 Plug 'https://github.com/liuchengxu/vim-which-key'  " set this up i guess
 Plug 'https://github.com/vim-scripts/scratch.vim'
-Plug 'https://github.com/luochen1990/rainbow'
 
 Plug 'https://github.com/tpope/vim-commentary'
 
@@ -45,17 +44,27 @@ set nowrap
 
 
 " mappings
-noremap <space>mk K
-noremap <space>mm :Man<space>
+" TODO why does gt work like that?  with no number it moves relative to the
+" current tab, with a number it moves relative to the first tab.
+
+" space
 noremap <space>w :w<return>
 
+" space m - manuals, tags, and keywords
+noremap <space>mk K
+noremap <space>mm :Man<space>
+
+" space t - tabs
 noremap <space>ta :tabnew<return>
 noremap <space>tr :tabnew<bar>term<return>
-" next, previous tab
-noremap <space>ti gt
-noremap <space>th gT
 
-noremap <space>ar :RainbowToggle<return>
+" space e - edit
+" make word i just typed uppercase
+" noremap <space>eu <Esc>gUkw`]a
+
+" space d - display
+noremap <space>dn :set<space>invnumber<return>
+noremap <space>dw :set<space>invwrap<return>
 
 nnoremap U <c-r>
 
@@ -99,8 +108,6 @@ noremap <C-w>L <nop>
 
 tnoremap <Esc> <C-\><C-n>
 
-" make word i just typed uppercase
-map! <C-F> <Esc>gUkw`]a
 
 set nohlsearch
 " set number
