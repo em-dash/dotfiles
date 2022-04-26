@@ -4,3 +4,4 @@ config/kak/plugins/*
 
 !config/kak/plugins/plug.kak
 
+config/nvim/.netrwhist
