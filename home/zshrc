@@ -49,6 +49,7 @@ alias lsl="ls -lAh | less"
 alias odx="od -t x1z"
 alias asdf="setxkbmap us colemak"
 alias quit="exit"
+alias qq="clang -Wall -std=c99 -pedantic"
 
 # functions
 function reboot-to-windows {
