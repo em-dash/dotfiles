@@ -24,6 +24,7 @@ call plug#end()
 " colorscheme zellner
 
 
+let g:zig_fmt_autosave = 0
 
 filetype plugin indent on
 " maybe i just fucking have to write an indentexpr because all of this is

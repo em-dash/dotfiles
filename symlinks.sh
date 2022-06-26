@@ -6,6 +6,6 @@ do
     ln -s $dotf $HOME/\.$(basename $dotf)
 done
 
-lesskeys
+lesskey
 
 
