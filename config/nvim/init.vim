@@ -11,7 +11,7 @@ Plug 'https://github.com/tikhomirov/vim-glsl', { 'for': 'glsl' }
 Plug 'https://github.com/ziglang/zig.vim', { 'for': 'zig' }
 
 " workflow or something idk
-Plug 'https://github.com/liuchengxu/vim-which-key'  " set this up i guess
+" Plug 'https://github.com/liuchengxu/vim-which-key'  " set this up i guess
 Plug 'https://github.com/vim-scripts/scratch.vim'
 
 Plug 'https://github.com/tpope/vim-commentary'
@@ -107,7 +107,7 @@ noremap <C-w>J <nop>
 noremap <C-w>K <nop>
 noremap <C-w>L <nop>
 
-tnoremap <Esc> <C-\><C-n>
+tnoremap <C-\> <C-\><C-n>
 
 
 set nohlsearch
