@@ -10,7 +10,6 @@ xmodmap -e "keycode 22 = Caps_Lock"
 
 xbindkeys
 
-exec awesome
-
+exec openbox
 
 
