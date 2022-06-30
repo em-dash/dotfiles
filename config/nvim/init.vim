@@ -58,6 +58,10 @@ noremap <space>mm :Man<space>
 " space t - tabs
 noremap <space>ta :tabnew<return>
 noremap <space>tr :tabnew<bar>term<return>
+noremap <space>ts gT
+noremap <space>tt gt
+noremap <space>tS :tabm -1<return>
+noremap <space>tT :tabm +1<return>
 
 " space e - edit
 " make word i just typed uppercase
