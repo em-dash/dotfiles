@@ -190,7 +190,7 @@
 <keyboard>
   <!--
     !!! NOTE !!!
-    openbox completely ignores the standard names for modifiers lol
+    openbox has weird names for modifiers
     C = control
     A = alt
     S = shift
@@ -198,13 +198,23 @@
   -->
   <chainQuitKey>C-g</chainQuitKey>
 
+  <keybind key="W-S-q">
+      <action name="Execute">
+          <command>openbox --exit</command>
+      </action>
+  </keybind>
+  <keybind key="W-S-r">
+      <action name="Execute">
+          <command>openbox --restart</command>
+      </action>
+  </keybind>
   <keybind key="W-space">
       <action name="Execute"><command>rofi -show run</command></action>
   </keybind>
   <keybind key="W-Return">
       <action name="Execute"><command>alacritty</command></action>
   </keybind>
-  <keybind key="W-x">
+  <keybind key="W-f">
       <action name="ToggleMaximize" />
   </keybind>
   <keybind key="XF86MonBrightnessUp">
@@ -266,16 +276,16 @@
   <keybind key="S-W-n">
     <action name="SendToDesktop"><to>down</to><wrap>no</wrap></action>
   </keybind>
-  <keybind key="W-F1">
+  <keybind key="W-1">
     <action name="GoToDesktop"><to>1</to></action>
   </keybind>
-  <keybind key="W-F2">
+  <keybind key="W-2">
     <action name="GoToDesktop"><to>2</to></action>
   </keybind>
-  <keybind key="W-F3">
+  <keybind key="W-3">
     <action name="GoToDesktop"><to>3</to></action>
   </keybind>
-  <keybind key="W-F4">
+  <keybind key="W-4">
     <action name="GoToDesktop"><to>4</to></action>
   </keybind>
   <keybind key="W-d">
