@@ -225,21 +225,22 @@
   </keybind>
   <keybind key="XF86Sleep">
       <!-- TODO figure out a way to do this -->
+      <!-- somehow the sleep button just works ? -->
   </keybind>
 
   <!-- Keybindings for desktop switching -->
   <keybind key="C-W-Left">
-    <action name="GoToDesktop"><to>left</to><wrap>no</wrap></action>
+    <action name="GoToDesktop"><to>left</to><wrap>yes</wrap></action>
   </keybind>
   <keybind key="C-W-Right">
-    <action name="GoToDesktop"><to>right</to><wrap>no</wrap></action>
+    <action name="GoToDesktop"><to>right</to><wrap>yes</wrap></action>
   </keybind>
-  <keybind key="C-W-Up">
-    <action name="GoToDesktop"><to>up</to><wrap>no</wrap></action>
-  </keybind>
-  <keybind key="C-W-Down">
-    <action name="GoToDesktop"><to>down</to><wrap>no</wrap></action>
-  </keybind>
+  <!-- <keybind key="C-W-Up"> -->
+  <!--   <action name="GoToDesktop"><to>up</to><wrap>no</wrap></action> -->
+  <!-- </keybind> -->
+  <!-- <keybind key="C-W-Down"> -->
+  <!--   <action name="GoToDesktop"><to>down</to><wrap>no</wrap></action> -->
+  <!-- </keybind> -->
   <keybind key="S-W-Left">
     <action name="SendToDesktop"><to>left</to><wrap>no</wrap></action>
   </keybind>
@@ -287,6 +288,18 @@
   </keybind>
   <keybind key="W-4">
     <action name="GoToDesktop"><to>4</to></action>
+  </keybind>
+  <keybind key="W-S-1">
+    <action name="SendToDesktop"><to>1</to></action>
+  </keybind>
+  <keybind key="W-S-2">
+    <action name="SendToDesktop"><to>2</to></action>
+  </keybind>
+  <keybind key="W-S-3">
+    <action name="SendToDesktop"><to>3</to></action>
+  </keybind>
+  <keybind key="W-S-4">
+    <action name="SendToDesktop"><to>4</to></action>
   </keybind>
   <keybind key="W-d">
     <action name="ToggleShowDesktop"/>

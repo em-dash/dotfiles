@@ -2,7 +2,8 @@
 # These things are run when an Openbox X Session is started.
 # You may place a similar script in $HOME/.config/openbox/autostart
 # to run user-specific things.
-#
+
+polybar &
 
 # If you want to use GNOME config tools...
 #
@@ -12,6 +13,3 @@
 #  gnome-settings-daemon &
 #fi
 
-# If you want to use XFCE config tools...
-#
-#xfce-mcs-manager &
