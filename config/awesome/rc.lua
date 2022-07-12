@@ -20,6 +20,75 @@ local hotkeys_popup = require("awful.hotkeys_popup")
 -- when client with a matching name is opened:
 require("awful.hotkeys_popup.keys")
 
+-- better alt+tab functionality
+local cyclefocus = require("cyclefocus")
+cyclefocus.show_clients = false
+cyclefocus.focus_clients = false
+cyclefocus.display_next_count = 5
+cyclefocus.display_previous_count = 5
+
+-- override default function to include minimized clients, and add good_common_tag to handle the case where everything is minimized
+cyclefocus.cycle_filters = {
+    function(c, source_c) return c end,  --luacheck: no unused args
+    good_common_tag  = function (c, source_c)
+        if c == source_c then
+            return true
+        end
+        cyclefocus.debug("common_tag_filter\n"
+            .. cyclefocus.get_object_name(c) .. " <=> " .. cyclefocus.get_object_name(source_c), 3)
+        if not source_c then
+            source_c = c
+        end
+        for _, t in pairs(c:tags()) do
+            for _, t2 in pairs(source_c:tags()) do
+                if t == t2 then
+                    cyclefocus.debug('common_tag_filter: client shares tag "'
+                        .. cyclefocus.get_object_name(t)
+                        .. '" with "' .. cyclefocus.get_object_name(c)..'"', 2)
+                    return true
+                end
+            end
+        end
+        return false
+    end,
+}
+
+--- Templates for entries in the list.
+-- The following arguments get passed to a callback:
+--  - client: the current client object.
+--  - idx: index number of current entry in clients list.
+--  - displayed_list: the list of entries in the list, possibly filtered.
+cyclefocus.preset_for_offset = {
+    -- Default callback, which will gets applied for all offsets (first).
+    default = function (preset, args)
+        -- Default font and icon size (gets overwritten for current/0 index).
+        preset.font = "Averia Libre 15"
+        preset.icon_size = dpi(24)
+        preset.text = cyclefocus.get_client_title(args.client, false)
+    end,
+
+    -- Preset for current entry.
+    ["0"] = function (preset, args)
+        preset.font = "Averia Libre 22"
+        preset.icon_size = dpi(36)
+        preset.text = cyclefocus.get_client_title(args.client, true)
+        -- Add screen number if there is more than one.
+        if screen.count() > 1 then
+            preset.text = preset.text .. " [screen " .. tostring(args.client.screen.index) .. "]"
+        end
+        preset.text = preset.text .. " [#" .. args.idx .. "] "
+        preset.text = '<b>' .. preset.text .. '</b>'
+    end,
+
+    -- You can refer to entries by their offset.
+    -- ["-1"] = function (preset, args)
+    --     -- preset.icon_size = 32
+    -- end,
+    -- ["1"] = function (preset, args)
+    --     -- preset.icon_size = 32
+    -- end
+}
+
 -- {{{ Error handling
 -- Check if awesome encountered an error during startup and fell back to
 -- another config (This code will only ever execute for the fallback config)
@@ -338,15 +407,23 @@ globalkeys = gears.table.join(
     --           {description = "focus the previous screen", group = "screen"}),
     -- awful.key({ modkey,           }, "u", awful.client.urgent.jumpto,
     --           {description = "jump to urgent client", group = "client"}),
-    -- ??????
-    awful.key({ modkey,           }, "Tab",
-        function ()
-            awful.client.focus.history.previous()
-            if client.focus then
-                client.focus:raise()
-            end
-        end,
-        {description = "go back", group = "client"}),
+ 
+    -- default alt+tab
+    -- awful.key({ modkey,           }, "Tab",
+    --     function ()
+    --         awful.client.focus.history.previous()
+    --         if client.focus then
+    --             client.focus:raise()
+    --         end
+    --     end,
+    --     {description = "go back", group = "client"}),
+
+    -- cyclefocus
+    -- This must be a clientkeys mapping to have source_c available in the callback.
+    cyclefocus.key({ modkey, }, "Tab", {
+        -- cycle_filters from the default filters:
+        cycle_filters = { cyclefocus.filters.good_common_tag },
+    }),
 
     -- Standard program
     awful.key({ modkey,           }, "Return", function () awful.spawn(terminal) end,

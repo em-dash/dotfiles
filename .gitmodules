@@ -10,3 +10,6 @@
 [submodule "config/alacritty/base16-alacritty"]
 	path = config/alacritty/base16-alacritty
 	url = https://github.com/aaron-williamson/base16-alacritty
+[submodule "config/awesome/cyclefocus"]
+	path = config/awesome/cyclefocus
+	url = https://github.com/blueyed/awesome-cyclefocus
