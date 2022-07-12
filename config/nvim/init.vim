@@ -10,7 +10,6 @@ call plug#begin(stdpath('data') . '/user_plugins')
 Plug 'https://github.com/tikhomirov/vim-glsl', { 'for': 'glsl' }
 Plug 'https://github.com/ziglang/zig.vim', { 'for': 'zig' }
 
-" workflow or something idk
 " Plug 'https://github.com/liuchengxu/vim-which-key'  " set this up i guess
 Plug 'https://github.com/vim-scripts/scratch.vim'
 
