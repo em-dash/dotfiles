@@ -12,9 +12,6 @@
   # available, otherwise `xterm-256color` is used.
   #TERM: xterm-256color
 
-# import:
-#   - ~/.config/alacritty/base16-alacritty/colors/base16-gruvbox-dark-pale.yml
-
 # XTerm's default colors
 colors:
    # Default colors
