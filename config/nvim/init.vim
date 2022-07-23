@@ -27,6 +27,7 @@ augroup end
 " colors
 colorscheme pablo
 highlight LineNr ctermfg=8
+highlight StatusLine ctermfg=0 ctermbg=7
 
 
 let g:zig_fmt_autosave = 0
