@@ -17,13 +17,19 @@ Plug 'https://github.com/tpope/vim-commentary'
 
 call plug#end()
 
+augroup term
+    autocmd TermOpen * setlocal nonumber
+    autocmd TermOpen * setlocal norelativenumber
+augroup end 
+
+
 
 " colors
 colorscheme pablo
+highlight LineNr ctermfg=8
 
 
 let g:zig_fmt_autosave = 0
-
 filetype plugin indent on
 " maybe i just fucking have to write an indentexpr because all of this is
 " horrible argh
