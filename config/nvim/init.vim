@@ -35,8 +35,7 @@ filetype plugin indent on
 " maybe i just fucking have to write an indentexpr because all of this is
 " horrible argh
 
-" smartindent is evil for various languages that aren't C because it fucks up
-" hashtags at the start of lines
+" smartindent breaks languages that aren't C
 set nosmartindent
 set autoindent
 set textwidth=0
