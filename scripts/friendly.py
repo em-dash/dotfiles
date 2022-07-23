@@ -1,10 +1,10 @@
-class __BetterQuitHelperManager__:
+class __quit_workaround__:
     _instance = None
     def __repr__(self): raise SystemExit
     def __new__(cls):
-        if not __BetterQuitHelperManager__._instance:
-            __BetterQuitHelperManager__._instance = True
-            return super(__BetterQuitHelperManager__, cls).__new__(cls)
+        if not __quit_workaround__._instance:
+            __quit_workaround__._instance = True
+            return super(__quit_workaround__, cls).__new__(cls)
         else: return _instance
 
-exit = quit = __BetterQuitHelperManager__()
+exit = quit = __quit_workaround__()
