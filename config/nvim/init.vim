@@ -25,15 +25,23 @@ augroup end
 
 
 " colors
-colorscheme pablo
+" colorscheme pablo
 highlight LineNr ctermfg=8
 highlight StatusLine ctermfg=0 ctermbg=7
+highlight Statement cterm=NONE
+highlight Comment ctermfg=7
+
+
+function! SynStack()
+  if !exists("*synstack")
+    return
+  endif
+  echo map(synstack(line('.'), col('.')), 'synIDattr(v:val, "name")')
+endfunc
 
 
 let g:zig_fmt_autosave = 0
 filetype plugin indent on
-" maybe i just fucking have to write an indentexpr because all of this is
-" horrible argh
 
 " smartindent breaks languages that aren't C
 set nosmartindent
