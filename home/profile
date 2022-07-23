@@ -1,7 +1,7 @@
 # vim: set ft=zsh:set textwidth=80
 
 if [ -f /etc/profile ] ; then 
-	source /etc/profile
+    source /etc/profile
 fi
 
 # variables
@@ -14,14 +14,7 @@ fi
 if [ -d ~/.cabal ] ; then
     PATH=${PATH}:~/.cabal/bin
 fi
-# TODO honey i don't think you thought this one through
-# if [ -d ~/.local/share/context ] ; then
-#     PATH=${PATH}:~/.local/share/context/tex/texmf-linuxmusl/bin
-# fi
 if [ $(command -v ruby) ] ; then
-#     PATH=${PATH}:~/.gem/ruby/$(ruby -v | grep -P -o '\d+\.\d+\.\d+')/bin
-# TODO i feel like this needs a check for if it fails somehow and if the output
-#      is good
     export GEM_HOME="$(ruby -e 'puts Gem.user_dir')"
     PATH=$PATH:$GEM_HOME/bin
 fi

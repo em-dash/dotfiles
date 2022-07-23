@@ -1,5 +1,5 @@
 if [ -f ~/.profile ]; then
-	source ~/.profile
+    source ~/.profile
 fi
 
 HISTFILE=~/.histfile
@@ -60,5 +60,5 @@ function reboot-to-windows {
 }
 
 function mkcd {
-	mkdir -p $1 && cd $1
+    mkdir -p $1 && cd $1
 }
