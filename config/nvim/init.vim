@@ -19,8 +19,7 @@ call plug#end()
 
 
 " colors
-" colorscheme base16-gruvbox-dark-pale
-" colorscheme zellner
+colorscheme pablo
 
 
 let g:zig_fmt_autosave = 0
@@ -69,6 +68,7 @@ noremap <space>tT :tabm +1<return>
 " space d - display
 noremap <space>dn :set<space>invnumber<return>
 noremap <space>dw :set<space>invwrap<return>
+noremap <space>dr :set<space>invrelativenumber<return>
 
 nnoremap U <c-r>
 
@@ -114,7 +114,8 @@ tnoremap <C-\> <C-\><C-n>
 
 
 set nohlsearch
-" set number
+set relativenumber
+set number
 
 
 " jesus lord indenting sucks
