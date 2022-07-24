@@ -1,19 +1,13 @@
-
-" plugins
+" PLUGINS
 call plug#begin(stdpath('data') . '/user_plugins')
-
-" themes
-" Plug 'https://github.com/fnune/base16-vim'
-
 
 " languages
 Plug 'https://github.com/tikhomirov/vim-glsl', { 'for': 'glsl' }
 Plug 'https://github.com/ziglang/zig.vim', { 'for': 'zig' }
 
-" Plug 'https://github.com/liuchengxu/vim-which-key'  " set this up i guess
-Plug 'https://github.com/vim-scripts/scratch.vim'
-
+" tools
 Plug 'https://github.com/tpope/vim-commentary'
+Plug 'https://github.com/junegunn/vim-easy-align'
 
 call plug#end()
 
@@ -23,15 +17,10 @@ augroup term
 augroup end 
 
 
+" COLORS
+colorscheme salt
 
-" colors
-" colorscheme pablo
-highlight LineNr ctermfg=8
-highlight StatusLine ctermfg=0 ctermbg=7
-highlight Statement cterm=NONE
-highlight Comment ctermfg=7
-
-
+" FUNCTIONS
 function! SynStack()
   if !exists("*synstack")
     return
@@ -48,18 +37,15 @@ set nosmartindent
 set autoindent
 set textwidth=0
 set colorcolumn=+1
+hi ColorColumn ctermbg=8
 set tabstop=4
 set shiftwidth=4
 set expandtab
-" override this in filetypes that need it, eg plain text, TeX
 set nowrap
 " TODO make wrapping look nicer and more clear
 
 
-" mappings
-" TODO why does gt work like that?  with no number it moves relative to the
-" current tab, with a number it moves relative to the first tab.
-
+" MAPPINGS
 " space
 noremap <space>w :w<return>
 
@@ -131,5 +117,3 @@ set nohlsearch
 set relativenumber
 set number
 
-
-" jesus lord indenting sucks
