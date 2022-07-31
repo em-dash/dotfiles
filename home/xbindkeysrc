@@ -6,7 +6,7 @@
    XF86AudioLowerVolume
 
 
-"light -A 8"
+"xbacklight -inc 5"
    XF86MonBrightnessUp 
-"light -U 8"
+"xbacklight -dec 5"
    XF86MonBrightnessDown

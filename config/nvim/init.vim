@@ -5,6 +5,9 @@ call plug#begin(stdpath('data') . '/user_plugins')
 Plug 'https://github.com/tikhomirov/vim-glsl', { 'for': 'glsl' }
 Plug 'https://github.com/ziglang/zig.vim', { 'for': 'zig' }
 
+Plug 'https://github.com/neovim/nvim-lspconfig'
+Plug 'nvim-lua/completion-nvim'
+
 " tools
 Plug 'https://github.com/tpope/vim-commentary'
 Plug 'https://github.com/junegunn/vim-easy-align'
@@ -15,7 +18,6 @@ augroup term
     autocmd TermOpen * setlocal nonumber
     autocmd TermOpen * setlocal norelativenumber
 augroup end 
-
 
 " COLORS
 colorscheme salt
@@ -29,7 +31,6 @@ function! SynStack()
 endfunc
 
 
-let g:zig_fmt_autosave = 0
 filetype plugin indent on
 
 " smartindent breaks languages that aren't C

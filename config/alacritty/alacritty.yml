@@ -138,22 +138,22 @@ font:
     style: Regular
 
   # Bold font face
-  # bold:
+  bold:
     # Font family
     # If the bold family is not specified, it will fall back to the
     # value specified for the normal font.
-    # family: OpenDyslexicMono
-    # style: Regular
+    family: SF Mono
+    style: Bold
 
   # Italic font face
   italic:
     family: SF Mono
-    style: Italic
+    style: Regular Italic
 
   # Bold italic font face
-  # bold_italic:
-    # family: OpenDyslexicMono
-    # style: Regular
+  bold_italic:
+    family: SF Mono
+    style: Bold Italic
 
   # Point size
   size: 14
