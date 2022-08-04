@@ -30,6 +30,7 @@ function! SynStack()
   echo map(synstack(line('.'), col('.')), 'synIDattr(v:val, "name")')
 endfunc
 
+let g:zig_fmt_autosave = 1
 
 filetype plugin indent on
 
@@ -43,7 +44,6 @@ set tabstop=4
 set shiftwidth=4
 set expandtab
 set nowrap
-" TODO make wrapping look nicer and more clear
 
 
 " MAPPINGS
