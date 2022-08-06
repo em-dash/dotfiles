@@ -15,30 +15,30 @@
 # XTerm's default colors
 colors:
    # Default colors
-   primary:
-     background: '#060200'
-     foreground: '#e0e0e0'
-   # Normal colors
-   normal:
-     black:   '#060200'
-     red:     '#d82828'
-     green:   '#18c018'
-     yellow:  '#d0d038'
-     blue:    '#6060ff'
-     magenta: '#c050c0'
-     cyan:    '#30c0c0'
-     white:   '#a0a0a0'
+  primary:
+    background: '#060200'
+    foreground: '#e0e0e0'
+    # Normal colors
+  normal:
+    black:   '#060200'
+    red:     '#d82828'
+    green:   '#18c018'
+    yellow:  '#d0d038'
+    blue:    '#6060ff'
+    magenta: '#c050c0'
+    cyan:    '#30c0c0'
+    white:   '#a0a0a0'
 
    # Bright colors
-   bright:
-     black:   '#606060'
-     red:     '#ff7878'
-     green:   '#50ff50'
-     yellow:  '#ffff78'
-     blue:    '#9090ff'
-     magenta: '#ff50ff'
-     cyan:    '#90e0e0'
-     white:   '#e8e8e8'
+  bright:
+    black:   '#303030'
+    red:     '#ff7878'
+    green:   '#50ff50'
+    yellow:  '#ffff78'
+    blue:    '#9090ff'
+    magenta: '#ff50ff'
+    cyan:    '#90e0e0'
+    white:   '#e8e8e8'
 
 window:
   # Window dimensions (changes require restart)
