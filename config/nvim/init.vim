@@ -3,43 +3,49 @@ call plug#begin(stdpath('data') . '/user_plugins')
 
 " languages
 Plug 'https://github.com/tikhomirov/vim-glsl', { 'for': 'glsl' }
-Plug 'https://github.com/ziglang/zig.vim', { 'for': 'zig' }
+" Plug 'https://github.com/ziglang/zig.vim', { 'for': 'zig' }
+Plug '~/src/zig.vim', { 'for': 'zig' }
 
 Plug 'https://github.com/neovim/nvim-lspconfig'
 Plug 'nvim-lua/completion-nvim'
 
 " tools
 Plug 'https://github.com/tpope/vim-commentary'
-Plug 'https://github.com/junegunn/vim-easy-align'
 
 call plug#end()
 
+
+" TERMINAL
 augroup term
     autocmd TermOpen * setlocal nonumber
     autocmd TermOpen * setlocal norelativenumber
-augroup end 
+augroup end
 
-" COLORS
+
+" DISPLAY
 colorscheme salt
+set cursorline
+
+set list
+autocmd InsertEnter * set listchars=nbsp:_,precedes:\\u25c2,extends:\\u25b8
+autocmd InsertLeave * set listchars=nbsp:_,precedes:\\u25c2,extends:\\u25b8,trail:_
 
 " FUNCTIONS
 function! SynStack()
-  if !exists("*synstack")
-    return
-  endif
-  echo map(synstack(line('.'), col('.')), 'synIDattr(v:val, "name")')
+    if !exists("*synstack")
+        return
+    endif
+    echo map(synstack(line('.'), col('.')), 'synIDattr(v:val, "name")')
 endfunc
 
-let g:zig_fmt_autosave = 1
 
+" FILETYPE
 filetype plugin indent on
-
-" smartindent breaks languages that aren't C
+" default settings
 set nosmartindent
 set autoindent
 set textwidth=0
 set colorcolumn=+1
-hi ColorColumn ctermbg=8
 set tabstop=4
 set shiftwidth=4
 set expandtab
@@ -70,6 +76,9 @@ noremap <space>tT :tabm +1<return>
 noremap <space>dn :set<space>invnumber<return>
 noremap <space>dw :set<space>invwrap<return>
 noremap <space>dr :set<space>invrelativenumber<return>
+
+" space c - compile
+noremap <space>cc :make<return>
 
 nnoremap U <c-r>
 

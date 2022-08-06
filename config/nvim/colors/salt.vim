@@ -6,13 +6,17 @@ if exists("syntax_on")
 endif
 let g:colors_name = "salt"
 
+hi ColorColumn ctermbg=233
 hi Comment    ctermfg=7
 hi Constant   ctermfg=14           cterm=none
+hi CursorLine ctermbg=233 cterm=none
+hi CursorLineNr ctermfg=7 ctermbg=233 cterm=none
 hi Delimiter  ctermfg=15
 hi Directory  ctermfg=2
 hi Error                 ctermbg=9
 hi Identifier ctermfg=9            cterm=none
 hi LineNr     ctermfg=8
+hi NonText    ctermfg=8
 hi Normal     ctermfg=15 ctermbg=0 cterm=none
 hi Operator   ctermfg=15
 hi PreProc    ctermfg=10
@@ -23,4 +27,3 @@ hi StatusLine ctermfg=8  ctermbg=15
 hi Title      ctermfg=2
 hi Todo       ctermfg=4  ctermbg=3
 hi Type       ctermfg=2
-
