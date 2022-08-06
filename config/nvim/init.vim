@@ -3,8 +3,7 @@ call plug#begin(stdpath('data') . '/user_plugins')
 
 " languages
 Plug 'https://github.com/tikhomirov/vim-glsl', { 'for': 'glsl' }
-" Plug 'https://github.com/ziglang/zig.vim', { 'for': 'zig' }
-Plug '~/src/zig.vim', { 'for': 'zig' }
+Plug 'https://github.com/ziglang/zig.vim', { 'for': 'zig' }
 
 Plug 'https://github.com/neovim/nvim-lspconfig'
 Plug 'nvim-lua/completion-nvim'
