@@ -80,6 +80,7 @@ noremap <space>dr :set<space>invrelativenumber<return>
 noremap <space>cc :make<return>
 
 nnoremap U <c-r>
+nnoremap <F1> <nop>
 
 noremap n j
 noremap N J
