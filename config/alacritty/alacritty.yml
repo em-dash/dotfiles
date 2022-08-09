@@ -37,7 +37,7 @@ colors:
     yellow:  '#ffff78'
     blue:    '#9090ff'
     magenta: '#ff50ff'
-    cyan:    '#90e0e0'
+    cyan:    '#70f0f0'
     white:   '#e8e8e8'
 
 window:

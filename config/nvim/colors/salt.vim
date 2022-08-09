@@ -26,5 +26,5 @@ hi Special    ctermfg=12
 hi Statement  ctermfg=3            cterm=none
 hi StatusLine ctermfg=8  ctermbg=15
 hi Title      ctermfg=2
-hi Todo       ctermfg=4  ctermbg=3
+hi Todo       ctermfg=0  ctermbg=14
 hi Type       ctermfg=2
