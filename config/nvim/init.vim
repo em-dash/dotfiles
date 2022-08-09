@@ -51,6 +51,10 @@ set expandtab
 set nowrap
 
 
+" UI
+set mouse=a
+
+
 " MAPPINGS
 " space
 noremap <space>w :w<return>
