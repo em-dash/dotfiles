@@ -16,6 +16,7 @@ hi Directory  ctermfg=2
 hi Error                 ctermbg=9
 hi Identifier ctermfg=9            cterm=none
 hi LineNr     ctermfg=8
+hi Matchparen            ctermbg=8
 hi NonText    ctermfg=8
 hi Normal     ctermfg=15 ctermbg=0 cterm=none
 hi Operator   ctermfg=15
