@@ -6,6 +6,8 @@ if exists("syntax_on")
 endif
 let g:colors_name = "salt"
 
+hi Pmenu ctermbg=8 ctermfg=15
+hi PmenuSel ctermbg=15 ctermfg=8
 hi ColorColumn ctermbg=233
 hi Comment    ctermfg=7
 hi Constant   ctermfg=14           cterm=none
