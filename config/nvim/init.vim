@@ -11,6 +11,10 @@ Plug 'https://github.com/editorconfig/editorconfig-vim'
 
 call plug#end()
 
+
+let g:zig_fmt_autosave=0
+
+
 " TERMINAL
 augroup term
     autocmd TermOpen * setlocal nonumber
