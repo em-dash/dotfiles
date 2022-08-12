@@ -14,6 +14,9 @@ Plug 'https://github.com/tpope/vim-commentary'
 call plug#end()
 
 
+let g:zig_fmt_autosave=0
+
+
 " TERMINAL
 augroup term
     autocmd TermOpen * setlocal nonumber
