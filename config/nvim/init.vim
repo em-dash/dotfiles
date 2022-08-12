@@ -5,14 +5,11 @@ call plug#begin(stdpath('data') . '/user_plugins')
 Plug 'https://github.com/tikhomirov/vim-glsl', { 'for': 'glsl' }
 Plug 'https://github.com/ziglang/zig.vim', { 'for': 'zig' }
 
-Plug 'https://github.com/neovim/nvim-lspconfig'
-Plug 'nvim-lua/completion-nvim'
-
 " tools
 Plug 'https://github.com/tpope/vim-commentary'
+Plug 'https://github.com/editorconfig/editorconfig-vim'
 
 call plug#end()
-
 
 " TERMINAL
 augroup term
