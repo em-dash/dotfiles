@@ -8,5 +8,3 @@ setlocal expandtab
 setlocal textwidth=100
 
 setlocal commentstring=//\ %s
-
-let g:zig_fmt_autosave = 1
