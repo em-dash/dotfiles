@@ -3,12 +3,13 @@
 setxkbmap us colemak
 xset r 66  # backspace (on capslock key) does not repeat by default
 xset m 1 100 # please no mouse accel
+xset r rate 400 80
 
 xmodmap -e "keycode 22 = Caps_Lock"
 
 # brightness and volume
 xbindkeys
 
-exec awesome
+exec openbox
 
 
