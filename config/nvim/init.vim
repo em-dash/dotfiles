@@ -30,6 +30,7 @@ set list
 autocmd InsertEnter * set listchars=nbsp:_,precedes:\\u25c2,extends:\\u25b8
 autocmd InsertLeave * set listchars=nbsp:_,precedes:\\u25c2,extends:\\u25b8,trail:_
 
+
 " FUNCTIONS
 function! SynStack()
     if !exists("*synstack")
@@ -55,6 +56,8 @@ set nowrap
 " MAPPINGS
 " space
 noremap <space>w :w<return>
+noremap <space>e :e<space>
+noremap <space>q :q<space>
 
 " space m - manuals, tags, and keywords
 noremap <space>mk K
@@ -67,10 +70,6 @@ noremap <space>ts gT
 noremap <space>tt gt
 noremap <space>tS :tabm -1<return>
 noremap <space>tT :tabm +1<return>
-
-" space e - edit
-" make word i just typed uppercase
-" noremap <space>eu <Esc>gUkw`]a
 
 " space d - display
 noremap <space>dn :set<space>invnumber<return>
