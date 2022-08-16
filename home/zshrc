@@ -37,7 +37,8 @@ unset coloruser
 #unset colorhost
 
 # aliases
-if [ ${LS_COLORS?} ] ; then
+# if [ ${LS_COLORS?} ] ; then
+if (( ${+LS_COLORS} )); then
     alias ls="ls --color=always"
 fi
 # TODO this is currently only doing color escape codes, figure out if it
