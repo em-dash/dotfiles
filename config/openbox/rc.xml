@@ -124,7 +124,7 @@
 
        use obconf if you want to change these without having to log out
        and back in -->
-  <number>4</number>
+  <number>6</number>
   <firstdesk>1</firstdesk>
   <names>
     <!-- set names up here if you want to, like this:
@@ -365,17 +365,6 @@
   <keybind key="W-S-Down">
     <action name="DirectionalCycleWindows">
       <direction>down</direction>
-    </action>
-  </keybind>
-
-  <!-- Keybindings for running applications -->
-  <keybind key="W-e">
-    <action name="Execute">
-      <startupnotify>
-        <enabled>true</enabled>
-        <name>Konqueror</name>
-      </startupnotify>
-      <command>kfmclient openProfile filemanagement</command>
     </action>
   </keybind>
 </keyboard>
