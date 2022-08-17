@@ -6,6 +6,7 @@ xset m 1 100 # please no mouse accel
 xset r rate 300 45
 
 xmodmap -e "keycode 22 = Caps_Lock"
+xmodmap -e "keycode 135 = Super_R"
 
 # brightness and volume
 xbindkeys
