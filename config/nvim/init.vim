@@ -9,6 +9,8 @@ Plug 'https://github.com/ziglang/zig.vim', { 'for': 'zig' }
 Plug 'https://github.com/tpope/vim-commentary'
 Plug 'https://github.com/editorconfig/editorconfig-vim'
 
+Plug 'https://github.com/lukas-reineke/indent-blankline.nvim'
+
 call plug#end()
 
 
@@ -29,6 +31,12 @@ set cursorline
 set list
 autocmd InsertEnter * set listchars=nbsp:_,precedes:\\u25c2,extends:\\u25b8
 autocmd InsertLeave * set listchars=nbsp:_,precedes:\\u25c2,extends:\\u25b8,trail:_
+
+lua << LUA_END
+require("indent_blankline").setup {
+    char = "▏"
+}
+LUA_END
 
 
 " FUNCTIONS
@@ -63,13 +71,12 @@ noremap <space>q :q<space>
 noremap <space>mk K
 noremap <space>mm :Man<space>
 
-" space t - tabs
-noremap <space>ta :tabnew<return>
+" tabs
 noremap <space>tr :tabnew<bar>term<return>
-noremap <space>ts gT
-noremap <space>tt gt
-noremap <space>tS :tabm -1<return>
-noremap <space>tT :tabm +1<return>
+noremap <space>h gT
+noremap <space>i gt
+noremap <space>H :tabm -1<return>
+noremap <space>I :tabm +1<return>
 
 " space d - display
 noremap <space>dn :set<space>invnumber<return>
