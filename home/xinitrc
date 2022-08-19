@@ -9,8 +9,8 @@ xmodmap -e "keycode 22 = Caps_Lock"
 xmodmap -e "keycode 135 = Super_R"
 
 # brightness and volume
-xbindkeys
+# xbindkeys
 
-exec openbox
+exec openbox-session
 
 
