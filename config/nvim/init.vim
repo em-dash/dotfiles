@@ -32,6 +32,7 @@ set list
 autocmd InsertEnter * set listchars=nbsp:_,precedes:\\u25c2,extends:\\u25b8
 autocmd InsertLeave * set listchars=nbsp:_,precedes:\\u25c2,extends:\\u25b8,trail:_
 
+hi IndentBlanklineChar ctermfg=233
 lua << LUA_END
 require("indent_blankline").setup {
     char = "▏"
@@ -65,7 +66,8 @@ set nowrap
 " space
 noremap <space>w :w<return>
 noremap <space>e :e<space>
-noremap <space>q :q<space>
+noremap <space>q :q<return>
+noremap <space>t :tabnew<space>
 
 " space m - manuals, tags, and keywords
 noremap <space>mk K
