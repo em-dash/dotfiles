@@ -11,6 +11,8 @@ xmodmap -e "keycode 135 = Super_R"
 # brightness and volume
 # xbindkeys
 
+xrdb -merge ~/.Xresources
+
 exec openbox-session
 
 
