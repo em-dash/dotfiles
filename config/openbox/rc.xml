@@ -221,11 +221,12 @@
   <keybind key="W-f">
       <action name="ToggleMaximize" />
   </keybind>
+  <!-- light requires the user to be in the video group to be able to work without root -->
   <keybind key="XF86MonBrightnessUp">
-      <action name="Execute"><command>xbacklight -inc 5</command></action>
+      <action name="Execute"><command>light -A 5</command></action>
   </keybind>
   <keybind key="XF86MonBrightnessDown">
-      <action name="Execute"><command>xbacklight -dec 5</command></action>
+      <action name="Execute"><command>light -U 5</command></action>
   </keybind>
   <keybind key="XF86Sleep">
       <!-- TODO figure out a way to do this -->
