@@ -229,8 +229,7 @@
       <action name="Execute"><command>light -U 5</command></action>
   </keybind>
   <keybind key="XF86Sleep">
-      <!-- TODO figure out a way to do this -->
-      <!-- somehow the sleep button just works ? -->
+      <action name="Execute"><command>sudo pm-suspend</command></action>
   </keybind>
 
   <!-- Keybindings for desktop switching -->
