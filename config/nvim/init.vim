@@ -29,8 +29,9 @@ colorscheme salt
 set cursorline
 
 set list
-autocmd InsertEnter * set listchars=nbsp:_,precedes:\\u25c2,extends:\\u25b8
-autocmd InsertLeave * set listchars=nbsp:_,precedes:\\u25c2,extends:\\u25b8,trail:_
+autocmd InsertEnter * set listchars=tab:>\ ,nbsp:_,precedes:◂,extends:▸
+autocmd InsertLeave * set listchars=tab:>\ ,nbsp:_,precedes:◂,extends:▸,trail:_
+set showbreak='⤷\ '
 
 hi IndentBlanklineChar ctermfg=233
 lua << LUA_END
@@ -79,6 +80,9 @@ noremap <space>h gT
 noremap <space>i gt
 noremap <space>H :tabm -1<return>
 noremap <space>I :tabm +1<return>
+
+" goto definition in new tab
+noremap <space><C-]> <C-w><C-]><C-w>T
 
 " space d - display
 noremap <space>dn :set<space>invnumber<return>
