@@ -45,8 +45,8 @@
 </placement>
 
 <theme>
-  <name>Clearlooks</name>
-  <titleLayout>NLIMC</titleLayout>
+  <name>Salt</name>
+  <titleLayout>NLDIMC</titleLayout>
   <!--
       available characters are NDSLIMC, each can occur at most once.
       N: window icon
@@ -63,7 +63,7 @@
     <name>Alegreya</name>
     <size>14</size>
     <!-- font size in points -->
-    <weight>bold</weight>
+    <weight>normal</weight>
     <!-- 'bold' or 'normal' -->
     <slant>normal</slant>
     <!-- 'italic' or 'normal' -->
@@ -72,7 +72,7 @@
     <name>Alegreya</name>
     <size>14</size>
     <!-- font size in points -->
-    <weight>bold</weight>
+    <weight>normal</weight>
     <!-- 'bold' or 'normal' -->
     <slant>normal</slant>
     <!-- 'italic' or 'normal' -->
@@ -99,7 +99,7 @@
     <name>Alegreya</name>
     <size>9</size>
     <!-- font size in points -->
-    <weight>bold</weight>
+    <weight>normal</weight>
     <!-- 'bold' or 'normal' -->
     <slant>normal</slant>
     <!-- 'italic' or 'normal' -->
@@ -108,7 +108,7 @@
     <name>Alegreya</name>
     <size>9</size>
     <!-- font size in points -->
-    <weight>bold</weight>
+    <weight>normal</weight>
     <!-- 'bold' or 'normal' -->
     <slant>normal</slant>
     <!-- 'italic' or 'normal' -->
