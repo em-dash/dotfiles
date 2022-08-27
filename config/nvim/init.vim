@@ -4,7 +4,7 @@ call plug#begin(stdpath('data') . '/user_plugins')
 " languages
 Plug 'https://github.com/tikhomirov/vim-glsl', { 'for': 'glsl' }
 Plug 'https://github.com/ziglang/zig.vim', { 'for': 'zig' }
-Plug 'https://github.com/zah/nim.vim', { 'for': 'nim' }
+Plug 'https://github.com/alaviss/nim.nvim', { 'for': 'nim' }
 
 " tools
 Plug 'https://github.com/tpope/vim-commentary'
