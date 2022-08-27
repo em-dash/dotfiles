@@ -16,11 +16,11 @@
 colors:
    # Default colors
   primary:
-    background: '#060200'
+    background: '#000000'
     foreground: '#e0e0e0'
     # Normal colors
   normal:
-    black:   '#060200'
+    black:   '#000000'
     red:     '#d82828'
     green:   '#18c018'
     yellow:  '#d0d038'
@@ -129,8 +129,6 @@ window:
 
 # Font configuration
 font:
-  # Normal (roman) font face
-  # "Overpass Mono:size=14:style=Medium:antialias=true:autohint=true"
   normal:
     # Font family
     family: SF Mono
@@ -142,17 +140,17 @@ font:
     # Font family
     # If the bold family is not specified, it will fall back to the
     # value specified for the normal font.
-    family: SF Mono
+    # family: SF Mono
     style: Bold
 
   # Italic font face
   italic:
-    family: SF Mono
+    # family: SF Mono
     style: Regular Italic
 
   # Bold italic font face
   bold_italic:
-    family: SF Mono
+    # family: SF Mono
     style: Bold Italic
 
   # Point size
