@@ -6,27 +6,28 @@ if exists("syntax_on")
 endif
 let g:colors_name = "salt"
 
-hi Pmenu ctermbg=8 ctermfg=15
-hi PmenuSel ctermbg=15 ctermfg=8
-hi ColorColumn ctermbg=233
-hi Comment    ctermfg=7
+hi StatusLine ctermbg=8 ctermfg=15 cterm=none
+hi StatusLineNC ctermbg=8 ctermfg=15 cterm=none
+hi Pmenu ctermbg=8 ctermfg=15 cterm=none
+hi PmenuSel ctermbg=15 ctermfg=8 cterm=none
+hi ColorColumn ctermbg=233 cterm=none
+hi Comment    ctermfg=7 cterm=italic
 hi Constant   ctermfg=14           cterm=none
 hi CursorLine ctermbg=233 cterm=none
 hi CursorLineNr ctermfg=7 ctermbg=233 cterm=none
-hi Delimiter  ctermfg=15
-hi Directory  ctermfg=2
+hi Delimiter  ctermfg=15 cterm=none
+hi Directory  ctermfg=2 cterm=none
 hi Error                 ctermbg=9
 hi Identifier ctermfg=9            cterm=none
-hi LineNr     ctermfg=8
-hi Matchparen            ctermbg=8
-hi NonText    ctermfg=8
+hi LineNr     ctermfg=8 cterm=none
+hi Matchparen            ctermbg=8 cterm=none
+hi NonText    ctermfg=8 cterm=none
 hi Normal     ctermfg=15 ctermbg=0 cterm=none
-hi Operator   ctermfg=15
-hi PreProc    ctermfg=10
-hi Search                ctermbg=3
-hi Special    ctermfg=12
+hi Operator   ctermfg=15 cterm=none
+hi PreProc    ctermfg=10 cterm=none
+hi Search                ctermbg=3 cterm=none
+hi Special    ctermfg=12 cterm=none
 hi Statement  ctermfg=3            cterm=none
-hi StatusLine ctermfg=8  ctermbg=15
-hi Title      ctermfg=2
-hi Todo       ctermfg=0  ctermbg=14
-hi Type       ctermfg=2
+hi Title      ctermfg=2 cterm=none
+hi Todo       ctermfg=0  ctermbg=14 cterm=none
+hi Type       ctermfg=2 cterm=none
