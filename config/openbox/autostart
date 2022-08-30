@@ -3,3 +3,4 @@
 killall -q polybar
 polybar -r example 2>&1 | tee -a /tmp/polybar.log & disown
 
+xsetroot -solid '#181818'
