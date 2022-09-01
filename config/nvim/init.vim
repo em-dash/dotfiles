@@ -69,7 +69,6 @@ set nowrap
 noremap <space>w :w<return>
 noremap <space>e :e<space>
 noremap <space>q :q<return>
-noremap <space>t :tabnew<space>
 
 " space m - manuals, tags, and keywords
 noremap <space>mk K
@@ -77,6 +76,8 @@ noremap <space>mm :Man<space>
 
 " tabs
 noremap <space>tr :tabnew<bar>term<return>
+noremap <space>tn :tabnew<space>
+noremap <space>td :tabnew<C-r>%<return>
 noremap <space>h gT
 noremap <space>i gt
 noremap <space>H :tabm -1<return>
@@ -90,7 +91,7 @@ noremap <space>dn :set<space>invnumber<return>
 noremap <space>dw :set<space>invwrap<return>
 noremap <space>dr :set<space>invrelativenumber<return>
 
-" space c - compile
+" space c - compiling, etc
 noremap <space>cc :make<return>
 
 nnoremap U <c-r>
