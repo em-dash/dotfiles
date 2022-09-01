@@ -77,7 +77,7 @@ noremap <space>mm :Man<space>
 " tabs
 noremap <space>tr :tabnew<bar>term<return>
 noremap <space>tn :tabnew<space>
-noremap <space>td :tabnew<C-r>%<return>
+noremap <space>td :tabnew<space>%<return>
 noremap <space>h gT
 noremap <space>i gt
 noremap <space>H :tabm -1<return>
