@@ -7,7 +7,7 @@ endif
 let g:colors_name = "salt"
 
 hi StatusLine ctermbg=8 ctermfg=15 cterm=none
-hi StatusLineNC ctermbg=8 ctermfg=15 cterm=none
+hi StatusLineNC ctermbg=234 ctermfg=7 cterm=none
 hi Pmenu ctermbg=8 ctermfg=15 cterm=none
 hi PmenuSel ctermbg=15 ctermfg=8 cterm=none
 hi ColorColumn ctermbg=233 cterm=none
