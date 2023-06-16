@@ -38,7 +38,7 @@ set cursorline
 set list
 autocmd InsertEnter * set listchars=tab:>\ ,nbsp:_,precedes:◂,extends:▸
 autocmd InsertLeave * set listchars=tab:>\ ,nbsp:_,precedes:◂,extends:▸,trail:_
-set showbreak='⤷\ '
+set showbreak=⤷\ \ \ \ 
 
 hi IndentBlanklineChar ctermfg=233
 lua << LUA_END
