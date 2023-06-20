@@ -212,7 +212,7 @@
           <command>openbox --restart</command>
       </action>
   </keybind>
-  <keybind key="W-space">
+  <keybind key="W-r">
       <action name="Execute"><command>rofi -show run</command></action>
   </keybind>
   <keybind key="W-Return">
