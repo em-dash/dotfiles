@@ -4,3 +4,9 @@
 [submodule "theme/posy-improved-cursor-linux"]
 	path = theme/posy-improved-cursor-linux
 	url = https://github.com/simtrami/posy-improved-cursor-linux
+[submodule "config/openbox/polybar-fcitx5-script"]
+	path = config/openbox/polybar-fcitx5-script
+	url = https://github.com/RRRRRm/polybar-fcitx5-script
+[submodule "config/polybar/polybar-fcitx5-script"]
+	path = config/polybar/polybar-fcitx5-script
+	url = https://github.com/RRRRRm/polybar-fcitx5-script

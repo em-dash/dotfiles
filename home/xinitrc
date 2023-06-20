@@ -1,4 +1,4 @@
-
+. ~/.xprofile
 
 setxkbmap us colemak
 xset r 66  # backspace (on capslock key) does not repeat by default
@@ -11,7 +11,9 @@ xmodmap -e "keycode 135 = Super_R"
 # brightness and volume
 # xbindkeys
 
-xrdb -merge ~/.Xresources
+fcitx5&
+
+# xrdb -merge ~/.Xresources
 
 exec openbox-session
 
