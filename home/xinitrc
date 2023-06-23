@@ -1,20 +1,21 @@
 . ~/.xprofile
 
-setxkbmap us colemak
+
+# setxkbmap us colemak
 xset r 66  # backspace (on capslock key) does not repeat by default
 xset m 1 100 # please no mouse accel
 xset r rate 300 45
 
-xmodmap -e "keycode 22 = Caps_Lock"
+# xmodmap -e "keycode 22 = Caps_Lock"
 xmodmap -e "keycode 135 = Super_R"
 
 # brightness and volume
 # xbindkeys
 
-fcitx5&
+fcitx5 &
 
-# xrdb -merge ~/.Xresources
+xrdb -merge ~/.Xresources
 
 exec openbox-session
 
-
+# vim: set ft=sh
