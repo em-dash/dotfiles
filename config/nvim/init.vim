@@ -1,18 +1,22 @@
 " PLUGINS
 call plug#begin(stdpath('data') . '/user_plugins')
 
+let g:fcitx5_remote='fcitx5-remote'
+
 " languages
 Plug 'https://github.com/tikhomirov/vim-glsl', { 'for': 'glsl' }
 Plug 'https://github.com/ziglang/zig.vim', { 'for': 'zig' }
 Plug 'https://github.com/alaviss/nim.nvim', { 'for': 'nim' }
 Plug 'https://github.com/chrisbra/csv.vim', { 'for': 'csv' }
 Plug 'https://github.com/preservim/vim-markdown'
+Plug 'https://github.com/lervag/vimtex'
 
 " tools
 Plug 'https://github.com/tpope/vim-commentary'
 Plug 'https://github.com/editorconfig/editorconfig-vim'
 
 Plug 'https://github.com/lukas-reineke/indent-blankline.nvim'
+Plug 'https://github.com/lilydjwg/fcitx.vim'
 
 " dependencies
 Plug 'https://github.com/godlygeek/tabular'
@@ -21,7 +25,7 @@ call plug#end()
 
 
 let g:zig_fmt_autosave=0
-let g:vim_markdown_folding_disabled = 1
+let g:vim_markdown_folding_disabled=1
 let g:csv_default_delim=','
 
 " TERMINAL
