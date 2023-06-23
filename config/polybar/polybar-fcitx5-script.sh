@@ -1,1 +1,0 @@
-polybar-fcitx5-script/polybar-fcitx5-script.sh
