@@ -28,6 +28,9 @@ let g:zig_fmt_autosave=0
 let g:vim_markdown_folding_disabled=1
 let g:csv_default_delim=','
 
+let g:vimtex_view_method='zathura'
+let g:vimtex_mappings_enabled=0
+
 " TERMINAL
 augroup term
     autocmd TermOpen * setlocal nonumber

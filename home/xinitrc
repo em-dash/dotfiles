@@ -16,6 +16,7 @@ fcitx5 -d
 
 xrdb -merge ~/.Xresources
 
-exec openbox-session
+# exec openbox-session
+exec awesome
 
 # vim: set ft=sh
