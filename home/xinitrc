@@ -10,13 +10,12 @@ xset r rate 300 45
 # xmodmap -e "keycode 135 = Super_R"
 
 # brightness and volume
-# xbindkeys
+xbindkeys
 
 fcitx5 -d
 
 xrdb -merge ~/.Xresources
 
-# exec openbox-session
-exec awesome
+exec openbox-session
 
 # vim: set ft=sh
