@@ -4,4 +4,4 @@
 
 [submodule "config/awesome/cyclefocus"]
     path = config/awesome/cyclefocus
-    path = https://github.com/blueyed/awesome-cyclefocus
+    url = https://github.com/blueyed/awesome-cyclefocus
