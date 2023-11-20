@@ -31,7 +31,7 @@ coloruser=${promptcolors[$(( (RANDOM % 7) + 1 ))]}
 
 PROMPT="
 %B%F{${coloruser}}%n%f%F{7}@%f%F{5}%m%f %F{15}%~%f%b
-%# "
+指令 %# "
 unset promptcolors
 unset coloruser
 #unset colorhost

@@ -116,7 +116,7 @@ end
 
 -- {{{ Variable definitions
 -- Themes define colours, icons, font and wallpapers.
-beautiful.init("~/.config/awesome/themes/default/theme.lua")
+beautiful.init("~/.config/awesome/themes/sav/theme.lua")
 
 -- This is used later as the default terminal and editor to run.
 terminal = "alacritty"
@@ -133,7 +133,7 @@ modkey = "Mod4"
 -- Table of layouts to cover with awful.layout.inc, order matters.
 awful.layout.layouts = {
     awful.layout.suit.floating,
-    -- awful.layout.suit.tile,
+    awful.layout.suit.tile,
     -- awful.layout.suit.tile.left,
     -- awful.layout.suit.tile.bottom,
     -- awful.layout.suit.tile.top,
@@ -312,20 +312,28 @@ awful.screen.connect_for_each_screen(function(s)
                         },
                         top = dpi(2),
                         bottom = dpi(2),
-                        -- left = dpi(12),
-                        right = dpi(16),
+                        left = dpi(4),
+                        right = dpi(4),
                         widget  = wibox.container.margin,
                     },
                     {
-                        id     = 'text_role',
-                        widget = wibox.widget.textbox,
+                        {
+                            id     = 'text_role',
+                            widget = wibox.widget.textbox,
+                        },
+                        top = dpi(2),
+                        bottom = dpi(2),
+                        left = dpi(4),
+                        right = dpi(4),
+                        widget  = wibox.container.margin,
                     },
                     layout = wibox.layout.fixed.horizontal,
+                    widget = wibox.container.margin,
                 },
-                left  = dpi(20),
-                right = dpi(20),
-                top = dpi(6),
-                bottom = dpi(6),
+                left  = dpi(4),
+                right = dpi(4),
+                top = dpi(4),
+                bottom = dpi(4),
                 widget = wibox.container.margin
             },
             id     = 'background_role',
@@ -432,23 +440,22 @@ globalkeys = gears.table.join(
               {description = "reload awesome", group = "awesome"}),
     awful.key({ modkey, "Shift"   }, "q", awesome.quit,
               {description = "quit awesome", group = "awesome"}),
-
-    awful.key({ modkey,           }, "l",     function () awful.tag.incmwfact( 0.05)          end,
+    awful.key({ modkey,           }, "i",     function () awful.tag.incmwfact( 0.05)          end,
               {description = "increase master width factor", group = "layout"}),
     awful.key({ modkey,           }, "h",     function () awful.tag.incmwfact(-0.05)          end,
               {description = "decrease master width factor", group = "layout"}),
     awful.key({ modkey, "Shift"   }, "h",     function () awful.tag.incnmaster( 1, nil, true) end,
               {description = "increase the number of master clients", group = "layout"}),
-    awful.key({ modkey, "Shift"   }, "l",     function () awful.tag.incnmaster(-1, nil, true) end,
+    awful.key({ modkey, "Shift"   }, "i",     function () awful.tag.incnmaster(-1, nil, true) end,
               {description = "decrease the number of master clients", group = "layout"}),
     awful.key({ modkey, "Control" }, "h",     function () awful.tag.incncol( 1, nil, true)    end,
               {description = "increase the number of columns", group = "layout"}),
-    awful.key({ modkey, "Control" }, "l",     function () awful.tag.incncol(-1, nil, true)    end,
+    awful.key({ modkey, "Control" }, "i",     function () awful.tag.incncol(-1, nil, true)    end,
               {description = "decrease the number of columns", group = "layout"}),
-    -- awful.key({ modkey,           }, "space", function () awful.layout.inc( 1)                end,
-    --           {description = "select next", group = "layout"}),
-    -- awful.key({ modkey, "Shift"   }, "space", function () awful.layout.inc(-1)                end,
-    --           {description = "select previous", group = "layout"}),
+    awful.key({ modkey,           }, "n", function () awful.layout.inc( 1)                end,
+              {description = "select next", group = "layout"}),
+    awful.key({ modkey, "Shift"   }, "e", function () awful.layout.inc(-1)                end,
+              {description = "select previous", group = "layout"}),
 
     awful.key({ modkey, "Control" }, "n",
               function ()
@@ -490,9 +497,8 @@ clientkeys = gears.table.join(
         {description = "toggle fullscreen", group = "client"}),
     -- awful.key({ modkey, "Shift"   }, "c",      function (c) c:kill()                         end,
     --           {description = "close", group = "client"}),
-    -- TODO i guess somethign else for switching layouts
-    -- awful.key({ modkey, "Control" }, "space",  awful.client.floating.toggle                     ,
-    --           {description = "toggle floating", group = "client"}),
+    awful.key({ modkey,           }, "l",  awful.client.floating.toggle                     ,
+              {description = "toggle floating", group = "client"}),
     awful.key({ modkey, "Control" }, "Return", function (c) c:swap(awful.client.getmaster()) end,
               {description = "move to master", group = "client"}),
     awful.key({ modkey,           }, "o",      function (c) c:move_to_screen()               end,
@@ -687,9 +693,16 @@ client.connect_signal("request::titlebars", function(c)
 
     top_titlebar : setup {
         { -- Left
-            awful.titlebar.widget.iconwidget(c),
-            buttons = buttons,
-            layout  = wibox.layout.fixed.horizontal
+            {
+                awful.titlebar.widget.iconwidget(c),
+                buttons = buttons,
+                layout  = wibox.layout.fixed.horizontal
+            },
+            top = dpi(4),
+            bottom = dpi(4),
+            left = dpi(6),
+            right = dpi(6),
+            widget  = wibox.container.margin,
         },
         { -- Middle
             { -- Title
@@ -705,7 +718,12 @@ client.connect_signal("request::titlebars", function(c)
             awful.titlebar.widget.stickybutton   (c),
             awful.titlebar.widget.ontopbutton    (c),
             awful.titlebar.widget.closebutton    (c),
-            layout = wibox.layout.fixed.horizontal()
+            layout = wibox.layout.fixed.horizontal(),
+            top = dpi(4),
+            bottom = dpi(4),
+            left = dpi(6),
+            right = dpi(6),
+            widget  = wibox.container.margin,
         },
         layout = wibox.layout.align.horizontal,
     }

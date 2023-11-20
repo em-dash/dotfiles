@@ -1,4 +1,12 @@
 " PLUGINS
+
+" autoinstall plugin manager
+let data_dir = has('nvim') ? stdpath('data') . '/site' : '~/.vim'
+if empty(glob(data_dir . '/autoload/plug.vim'))
+  silent execute '!curl -fLo '.data_dir.'/autoload/plug.vim --create-dirs  https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'
+  autocmd VimEnter * PlugInstall --sync | source $MYVIMRC
+endif
+
 call plug#begin(stdpath('data') . '/user_plugins')
 
 let g:fcitx5_remote='fcitx5-remote'
@@ -48,11 +56,11 @@ autocmd InsertLeave * set listchars=tab:>\ ,nbsp:_,precedes:◂,extends:▸,trai
 set showbreak=⤷\ \ \ \ 
 
 hi IndentBlanklineChar ctermfg=233
-lua << LUA_END
-require("indent_blankline").setup {
-    char = "▏"
-}
-LUA_END
+" :lua << LUA_END
+" require("indent_blankline").setup {
+"     char = "▏"
+" }
+" LUA_END
 
 
 " FUNCTIONS
