@@ -4,9 +4,6 @@ if [ -f /etc/profile ] ; then
     source /etc/profile
 fi
 
-# variables
-export LANG='en_US.UTF-8'
-
 PATH=${PATH}:~/.local/bin
 if [ -d ~/.cargo ] ; then
     PATH=${PATH}:~/.cargo/bin
@@ -29,6 +26,8 @@ export LESS='R'
 
 export PYTHONSTARTUP=~/.dotfiles/scripts/friendly.py
 export PYTHONPYCACHEPREFIX=~/.cache/python
+
+export GNUPGHOME=~/.gnupg
 
 
 # this is from coreutils
