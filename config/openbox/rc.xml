@@ -216,7 +216,7 @@
       <action name="Execute"><command>rofi -show run</command></action>
   </keybind>
   <keybind key="W-Return">
-      <action name="Execute"><command>konsole</command></action>
+      <action name="Execute"><command>alacritty</command></action>
   </keybind>
   <keybind key="W-f">
       <action name="ToggleMaximize" />
