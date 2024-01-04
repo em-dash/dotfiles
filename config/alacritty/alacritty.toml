@@ -1,0 +1,81 @@
+# dynamic_title = false
+
+[colors.bright]
+black = "#303030"
+blue = "#9090ff"
+cyan = "#70f0f0"
+green = "#50ff50"
+magenta = "#ff50ff"
+red = "#ff7878"
+white = "#e8e8e8"
+yellow = "#ffff78"
+
+[colors.normal]
+black = "#000000"
+blue = "#3030ff"
+cyan = "#30c0c0"
+green = "#18c018"
+magenta = "#c050c0"
+red = "#d82828"
+white = "#a0a0a0"
+yellow = "#d0d038"
+
+[colors.primary]
+background = "#000000"
+foreground = "#e0e0e0"
+
+[font]
+size = 10.5
+
+[font.bold]
+style = "SemiBold"
+
+[font.bold_italic]
+style = "SemiBold Italic"
+
+[font.glyph_offset]
+x = 0
+y = 0
+
+[font.italic]
+style = "SemiLight Italic"
+
+[font.normal]
+family = "Cascadia Mono"
+style = "SemiLight"
+
+[font.offset]
+x = 0
+y = 0
+
+[[keyboard.bindings]]
+action = "IncreaseFontSize"
+key = "Equals"
+mods = "Control"
+
+[[keyboard.bindings]]
+action = "DecreaseFontSize"
+key = "Minus"
+mods = "Control"
+
+[[keyboard.bindings]]
+action = "ToggleFullscreen"
+key = "F11"
+
+[[keyboard.bindings]]
+action = "ScrollPageUp"
+key = "PageUp"
+mode = "~Alt"
+mods = "Shift"
+
+[[keyboard.bindings]]
+action = "ScrollPageDown"
+key = "PageDown"
+mode = "~Alt"
+mods = "Shift"
+
+[mouse]
+hide_when_typing = true
+
+[window]
+startup_mode = "Maximized"

@@ -1,12 +1,8 @@
-
-let b:did_ftplugin=1
-
 noremap <space>cf :call<space>zig#fmt#Format()<cr>
+compiler zig
 
-setlocal tabstop=4
-setlocal shiftwidth=4
-setlocal expandtab
+noremap <space>cc :make<space>build<cr>
+noremap <space>ct :make<space>test<cr>
+noremap <space>cr :make<space>run<cr>
 
 setlocal textwidth=100
-
-setlocal commentstring=//\ %s

@@ -13,22 +13,24 @@ let g:fcitx5_remote='fcitx5-remote'
 
 " languages
 Plug 'https://github.com/tikhomirov/vim-glsl'
-Plug 'https://github.com/ziglang/zig.vim'
 Plug 'https://github.com/alaviss/nim.nvim'
 Plug 'https://github.com/chrisbra/csv.vim'
 Plug 'https://github.com/preservim/vim-markdown'
 Plug 'https://github.com/lervag/vimtex'
+Plug 'https://github.com/ziglang/zig.vim' " more up to date than local files
 
-" tools
-Plug 'https://github.com/tpope/vim-commentary'
+" editing tools
+Plug 'https://github.com/tomtom/tcomment_vim'
 Plug 'https://github.com/editorconfig/editorconfig-vim'
-Plug 'https://github.com/ziglang/zig.vim'
-
 Plug 'https://github.com/lukas-reineke/indent-blankline.nvim'
 Plug 'https://github.com/lilydjwg/fcitx.vim'
+" Plug 'https://github.com/tpope/vim-surround'
 
 " dependencies
 Plug 'https://github.com/godlygeek/tabular'
+
+" workflow
+Plug 'https://github.com/nvim-neorg/neorg'
 
 call plug#end()
 
@@ -39,7 +41,6 @@ let g:csv_default_delim=','
 let g:vimtex_view_method='zathura'
 let g:vimtex_mappings_enabled=0
 
-lua require "ibl".setup()
 hi IblIndent ctermfg=233
 
 " TERMINAL
@@ -47,7 +48,6 @@ augroup term
     autocmd TermOpen * setlocal nonumber
     autocmd TermOpen * setlocal norelativenumber
 augroup end
-
 
 " DISPLAY
 colorscheme salt
@@ -57,6 +57,8 @@ set list
 autocmd InsertEnter * set listchars=tab:>\ ,nbsp:_,precedes:◂,extends:▸
 autocmd InsertLeave * set listchars=tab:>\ ,nbsp:_,precedes:◂,extends:▸,trail:_
 set showbreak=⤷\ \ \ \ 
+
+lua require "ibl".setup()
 
 " INTERFACE
 set ignorecase
