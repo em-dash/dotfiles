@@ -30,6 +30,13 @@ font-style-bold = "SemiBold"
 font-style-italic = "SemiLight Italic"
 font-style-bold-italic = "SemiBold Italic"
 font-family = "WenQuanYi Micro Hei Mono"
+# currently not working
+# font-family = "OpenMoji"
+# font-style = "OpenMoji Color"
+# font-style-bold = "OpenMoji Color"
+# font-style-italic = "OpenMoji Color"
+# font-style-bold-italic = "OpenMoji Color"
+
 
 font-size = 15
 
