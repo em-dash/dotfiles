@@ -1,0 +1,57 @@
+# GRAPHICS
+# background = 000000
+# foreground = e0e0e0
+# cursor-color = ffffff
+#
+# palette = 0=#000000
+# palette = 1=#d82020
+# palette = 2=#18c018
+# palette = 3=#d0d038
+# palette = 4=#3030e0
+# palette = 5=#c050c0
+# palette = 6=#30c0c0
+# palette = 7=#a0a0a0
+# palette = 8=#303030
+# palette = 9=#f02828
+# palette = 10=#50ff50
+# palette = 11=#ffff78
+# palette = 12=#9090ff
+# palette = 13=#ff50ff
+# palette = 14=#70f0f0
+# palette = 15=#e8e8e8
+
+theme = Mathias
+
+# font
+font-family = ""
+font-family = "Cascadia Mono"
+font-style = "SemiLight"
+font-style-bold = "SemiBold"
+font-style-italic = "SemiLight Italic"
+font-style-bold-italic = "SemiBold Italic"
+font-family = "WenQuanYi Micro Hei Mono"
+
+font-size = 15
+
+# mouse
+mouse-hide-while-typing = true
+
+# window
+gtk-titlebar = false
+
+# INPUT
+keybind = ctrl+alt+r=reload_config
+keybind = shift+page_up=scroll_page_up
+keybind = shift+page_down=scroll_page_down
+keybind = shift+home=scroll_to_top
+keybind = shift+end=scroll_to_bottom
+
+# clipboard
+clipboard-trim-trailing-spaces = false
+clipboard-read = allow
+clipboard-write = allow
+clipboard-paste-protection = false
+copy-on-select = false
+
+# FUNCTIONALITY
+shell-integration = zsh
