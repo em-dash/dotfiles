@@ -43,8 +43,9 @@ font-size = 15
 # mouse
 mouse-hide-while-typing = true
 
-# window
+# window & process
 gtk-titlebar = false
+gtk-single-instance = false
 
 # INPUT
 keybind = ctrl+alt+r=reload_config
