@@ -20,6 +20,8 @@
 # palette = 14=#70f0f0
 # palette = 15=#e8e8e8
 
+custom-shader = ~/.config/ghostty/arst.glsl
+
 theme = Mathias
 
 # font
@@ -45,7 +47,7 @@ mouse-hide-while-typing = true
 
 # window & process
 gtk-titlebar = false
-gtk-single-instance = false
+gtk-single-instance = true
 
 # INPUT
 keybind = ctrl+alt+r=reload_config
