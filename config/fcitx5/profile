@@ -1,0 +1,47 @@
+[Groups/0]
+# Group Name
+Name="Group 1"
+# Layout
+Default Layout=us-colemak
+# Default Input Method
+DefaultIM=rime
+
+[Groups/0/Items/0]
+# Name
+Name=keyboard-us-colemak
+# Layout
+Layout=
+
+[Groups/0/Items/1]
+# Name
+Name=ipa-x-sampa
+# Layout
+Layout=
+
+[Groups/0/Items/2]
+# Name
+Name=rime
+# Layout
+Layout=
+
+[Groups/0/Items/3]
+# Name
+Name=hangul
+# Layout
+Layout=
+
+[Groups/0/Items/4]
+# Name
+Name=keyboard-gr-colemak
+# Layout
+Layout=
+
+[Groups/0/Items/5]
+# Name
+Name=keyboard-il
+# Layout
+Layout=
+
+[GroupOrder]
+0="Group 1"
+
