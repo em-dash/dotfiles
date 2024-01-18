@@ -20,13 +20,11 @@
 # palette = 14=#70f0f0
 # palette = 15=#e8e8e8
 
-custom-shader = ~/.config/ghostty/arst.glsl
-
 theme = Mathias
 
 # font
 font-family = ""
-font-family = "Cascadia Mono"
+font-family = "SF Mono"
 font-style = "SemiLight"
 font-style-bold = "SemiBold"
 font-style-italic = "SemiLight Italic"
@@ -47,7 +45,7 @@ mouse-hide-while-typing = true
 
 # window & process
 gtk-titlebar = false
-gtk-single-instance = true
+gtk-single-instance = false
 
 # INPUT
 keybind = ctrl+alt+r=reload_config
