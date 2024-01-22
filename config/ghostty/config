@@ -53,6 +53,7 @@ keybind = shift+page_up=scroll_page_up
 keybind = shift+page_down=scroll_page_down
 keybind = shift+home=scroll_to_top
 keybind = shift+end=scroll_to_bottom
+keybind = f11=toggle_fullscreen
 
 # clipboard
 clipboard-trim-trailing-spaces = false
@@ -62,4 +63,4 @@ clipboard-paste-protection = false
 copy-on-select = false
 
 # FUNCTIONALITY
-shell-integration = zsh
+shell-integration = fish

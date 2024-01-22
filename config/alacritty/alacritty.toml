@@ -28,21 +28,21 @@ foreground = "#e0e0e0"
 size = 10.5
 
 [font.bold]
-style = "SemiBold"
+# style = "SemiBold"
 
 [font.bold_italic]
-style = "SemiBold Italic"
+# style = "SemiBold Italic"
 
 [font.glyph_offset]
 x = 0
 y = 0
 
 [font.italic]
-style = "SemiLight Italic"
+# style = "SemiLight Italic"
 
 [font.normal]
-family = "Cascadia Mono"
-style = "SemiLight"
+family = "SF Mono"
+# style = "SemiLight"
 
 [font.offset]
 x = 0

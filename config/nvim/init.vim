@@ -62,7 +62,11 @@ autocmd InsertEnter * set listchars=tab:>\ ,nbsp:_,precedes:◂,extends:▸
 autocmd InsertLeave * set listchars=tab:>\ ,nbsp:_,precedes:◂,extends:▸,trail:_
 set showbreak=⤷\ \ \ \ 
 
-lua require "ibl".setup()
+:lua << EOF
+require "ibl".setup {
+    indent = { char = "▏" },
+}
+EOF
 
 :lua << END
 require('lualine').setup {
@@ -118,6 +122,7 @@ END
 " INTERFACE
 set ignorecase
 set smartcase
+set formatoptions-=ro
 
 
 " FUNCTIONS
