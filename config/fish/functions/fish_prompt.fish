@@ -17,5 +17,5 @@ function fish_prompt
 
     set -f prompt_path (string trim --right --chars=/ $prompt_path)
 
-    printf (string join '' -- '\n' (whoami) (set_color brblack) '@' (set_color normal) (prompt_hostname) ' ' $prompt_path '\n¿ ')
+    printf (string join '' -- '\n' (whoami) (set_color brblack) '@' (set_color normal) (prompt_hostname) ' ' $prompt_path '\n¿ ' (set_color normal))
 end
