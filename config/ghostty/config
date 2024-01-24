@@ -38,7 +38,7 @@ font-family = "WenQuanYi Micro Hei Mono"
 # font-style-bold-italic = "OpenMoji Color"
 font-family = "Symbols Nerd Font Mono"
 
-font-size = 15
+font-size = 14
 
 # mouse
 mouse-hide-while-typing = true

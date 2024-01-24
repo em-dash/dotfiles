@@ -24,10 +24,10 @@ hi LineNr     ctermfg=8 cterm=none
 hi Macro      ctermfg=5 cterm=none
 hi Matchparen            ctermbg=8 cterm=none
 hi NonText    ctermfg=8 cterm=none
-hi Normal     ctermfg=15 ctermbg=0 cterm=none
+hi Normal     ctermfg=15 ctermbg=none cterm=none
 hi Operator   ctermfg=15 cterm=none
 hi PreProc    ctermfg=10 cterm=none
-hi Search                ctermbg=3 cterm=none 
+hi Search                ctermbg=3 cterm=none
 hi Special    ctermfg=12 cterm=none
 hi SpecialComment    ctermfg=12 cterm=italic
 hi Statement  ctermfg=3            cterm=underline
