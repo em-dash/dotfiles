@@ -14,33 +14,21 @@ Layout=
 
 [Groups/0/Items/1]
 # Name
-Name=ipa-x-sampa
+Name=keyboard-gr-colemak
 # Layout
 Layout=
 
 [Groups/0/Items/2]
 # Name
-Name=rime
+Name=keyboard-il
 # Layout
 Layout=
 
 [Groups/0/Items/3]
 # Name
-Name=hangul
+Name=rime
 # Layout
-Layout=
-
-[Groups/0/Items/4]
-# Name
-Name=keyboard-gr-colemak
-# Layout
-Layout=
-
-[Groups/0/Items/5]
-# Name
-Name=keyboard-il
-# Layout
-Layout=
+Layout=us-colemak
 
 [GroupOrder]
 0="Group 1"
