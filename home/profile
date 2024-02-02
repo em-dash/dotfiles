@@ -15,6 +15,10 @@ if [ $(command -v ruby) ] ; then
     export GEM_HOME="$(ruby -e 'puts Gem.user_dir')"
     PATH=$PATH:$GEM_HOME/bin
 fi
+if [ -d ~/.zvm ] ; then
+    export ZVM_INSTALL=~/.zvm/self
+    PATH=${PATH}:~/.zvm/bin
+fi
 
 export PATH
 

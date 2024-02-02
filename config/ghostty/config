@@ -1,14 +1,13 @@
 # GRAPHICS
 
-theme = Mathias
+theme = Pro
 
 # font
-font-family = ""
 font-family = "SF Mono"
-font-style = "SemiLight"
-font-style-bold = "SemiBold"
-font-style-italic = "SemiLight Italic"
-font-style-bold-italic = "SemiBold Italic"
+# font-style = "SemiLight"
+# font-style-bold = "SemiBold"
+# font-style-italic = "SemiLight Italic"
+# font-style-bold-italic = "SemiBold Italic"
 font-family = "WenQuanYi Micro Hei Mono"
 # currently not working
 # font-family = "OpenMoji"
