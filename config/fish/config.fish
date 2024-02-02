@@ -2,6 +2,8 @@ if status is-interactive
     # Commands to run in interactive sessions can go here
 end
 
+fish_add_path ~/.local/bin
+
 alias ls "ls --color=auto"
 alias la "ls -A"
 alias ll "ls -lAh"
