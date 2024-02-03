@@ -1,6 +1,6 @@
-# GRAPHICS
-
+# visuals
 theme = Pro
+window-padding-balance = true
 
 # font
 font-family = "SF Mono"

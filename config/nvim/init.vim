@@ -25,6 +25,7 @@ Plug 'https://github.com/editorconfig/editorconfig-vim'
 Plug 'https://github.com/lukas-reineke/indent-blankline.nvim'
 Plug 'https://github.com/lilydjwg/fcitx.vim'
 " Plug 'https://github.com/tpope/vim-surround'
+Plug 'https://github.com/nvim-telescope/telescope.nvim'
 
 " dependencies
 Plug 'https://github.com/godlygeek/tabular'

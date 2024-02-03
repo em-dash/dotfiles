@@ -41,4 +41,3 @@ if [ $(command -v dircolors) ] ; then
     eval $(dircolors ~/.lscolors)
 fi
 
-
