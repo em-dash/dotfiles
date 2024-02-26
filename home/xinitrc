@@ -9,8 +9,10 @@ xset r rate 300 45
 # xmodmap -e "keycode 22 = Caps_Lock"
 # xmodmap -e "keycode 135 = Super_R"
 
+xinput set-prop "ETPS/2 Elantech Touchpad" "libinput Tapping Enabled" 1
+
 # brightness and volume
-xbindkeys
+# xbindkeys
 
 fcitx5 -d
 

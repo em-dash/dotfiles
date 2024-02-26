@@ -13,9 +13,8 @@ hi PmenuSel ctermbg=15 ctermfg=8 cterm=none
 hi ColorColumn ctermbg=233 cterm=none
 hi Comment    ctermfg=7 cterm=italic
 hi Constant   ctermfg=14           cterm=none
-hi CursorLine ctermbg=233 cterm=none
-" hi CursorLine                         cterm=underline
-hi CursorLineNr ctermfg=7 ctermbg=233 cterm=bold
+hi CursorLine             ctermbg=233 cterm=none
+hi CursorLineNr ctermfg=0 ctermbg=7 cterm=bold
 hi Delimiter  ctermfg=15 cterm=none
 hi Directory  ctermfg=2 cterm=none
 hi Error                 ctermbg=9
@@ -30,7 +29,9 @@ hi PreProc    ctermfg=10 cterm=none
 hi Search                ctermbg=3 cterm=none
 hi Special    ctermfg=12 cterm=none
 hi SpecialComment    ctermfg=12 cterm=italic
-hi Statement  ctermfg=3            cterm=underline
+hi Keyword ctermfg=9 cterm=italic
+hi Statement  ctermfg=11            cterm=italic
 hi Title      ctermfg=2 cterm=none
 hi Todo       ctermfg=0  ctermbg=14 cterm=none
-hi Type       ctermfg=2 cterm=none
+hi Type       ctermfg=4 cterm=none
+hi StorageClass ctermfg=2 cterm=none
