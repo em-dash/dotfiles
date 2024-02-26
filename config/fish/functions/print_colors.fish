@@ -1,0 +1,18 @@
+function print_colors
+    printf (string join '' (set_color black) black '\n')
+    printf (string join '' (set_color red) red '\n')
+    printf (string join '' (set_color green) green '\n')
+    printf (string join '' (set_color yellow) yellow '\n')
+    printf (string join '' (set_color blue) blue '\n')
+    printf (string join '' (set_color magenta) magenta '\n')
+    printf (string join '' (set_color cyan) cyan '\n')
+    printf (string join '' (set_color white) white '\n')
+    printf (string join '' (set_color brblack) brblack '\n')
+    printf (string join '' (set_color brred) brred '\n')
+    printf (string join '' (set_color brgreen) brgreen '\n')
+    printf (string join '' (set_color bryellow) bryellow '\n')
+    printf (string join '' (set_color brblue) brblue '\n')
+    printf (string join '' (set_color brmagenta) brmagenta '\n')
+    printf (string join '' (set_color brcyan) brcyan '\n')
+    printf (string join '' (set_color brwhite) brwhite '\n')
+end

@@ -1,9 +1,34 @@
 # visuals
-theme = Pro
+palette = 0=#000000
+palette = 1=#f18ea3
+palette = 2=#70be4b
+palette = 3=#cfa54c
+palette = 4=#51bcb0
+palette = 5=#df8cef
+palette = 6=#60b2ef
+palette = 7=#cccccc
+palette = 8=#333333
+palette = 9=#ffb1c0
+palette = 10=#6de000
+palette = 11=#f7be00
+palette = 12=#00dece
+palette = 13=#f2afff
+palette = 14=#93ccff
+palette = 15=#ffffff
+background = #000000
+foreground = #cccccc
+
+# theme = "PaulMillr"
 window-padding-balance = true
+# adjust-cell-height = 10%
+# adjust-underline-thickness = 0.5
+adjust-underline-thickness = -50%
+adjust-underline-position = 25%
 
 # font
-font-family = "SF Mono"
+# font-family = "SF Mono"
+font-family = "Fantasque Sans Mono"
+font-feature = -calt
 # font-style = "SemiLight"
 # font-style-bold = "SemiBold"
 # font-style-italic = "SemiLight Italic"
@@ -16,7 +41,7 @@ font-family = "WenQuanYi Micro Hei Mono"
 # font-style-italic = "OpenMoji Color"
 # font-style-bold-italic = "OpenMoji Color"
 
-font-size = 14
+font-size = 16
 
 # mouse
 mouse-hide-while-typing = true
@@ -42,3 +67,4 @@ copy-on-select = false
 
 # FUNCTIONALITY
 shell-integration = fish
+term = ghostty
