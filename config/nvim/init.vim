@@ -18,6 +18,7 @@ Plug 'https://github.com/chrisbra/csv.vim'
 Plug 'https://github.com/preservim/vim-markdown'
 Plug 'https://github.com/lervag/vimtex'
 Plug 'https://github.com/ziglang/zig.vim' " more up to date than local files
+Plug 'https://git.sr.ht/~sircmpwn/hare.vim'
 
 " editing tools
 Plug 'https://github.com/tomtom/tcomment_vim'
