@@ -17,8 +17,8 @@ Plug 'https://github.com/alaviss/nim.nvim'
 Plug 'https://github.com/chrisbra/csv.vim'
 Plug 'https://github.com/preservim/vim-markdown'
 Plug 'https://github.com/lervag/vimtex'
-Plug 'https://github.com/em-dash/zig.vim' " more up to date than local files
-Plug 'https://github.com/RaafatTurki/hex.nvim' " technically not a language but close enough
+Plug 'https://github.com/ziglang/zig.vim' " more up to date than local files
+Plug 'https://github.com/RaafatTurki/hex.nvim'
 
 " editing tools
 Plug 'https://github.com/tomtom/tcomment_vim'
@@ -27,6 +27,8 @@ Plug 'https://github.com/lukas-reineke/indent-blankline.nvim'
 Plug 'https://github.com/lilydjwg/fcitx.vim'
 " Plug 'https://github.com/tpope/vim-surround'
 Plug 'https://github.com/nvim-telescope/telescope.nvim'
+Plug 'https://github.com/neovim/nvim-lspconfig'
+" Plug 'https://github.com/nvim-lua/completion-nvim'
 
 " dependencies
 Plug 'https://github.com/godlygeek/tabular'
@@ -63,6 +65,23 @@ set list
 autocmd InsertEnter * set listchars=tab:>\ ,nbsp:_,precedes:◂,extends:▸
 autocmd InsertLeave * set listchars=tab:>\ ,nbsp:_,precedes:◂,extends:▸,trail:_
 set showbreak=⤷\ \ \ \ 
+
+:lua << EOF
+    local lspconfig = require('lspconfig')
+    local on_attach = function(_, bufnr)
+        vim.api.nvim_buf_set_option(bufnr, 'omnifunc', 'v:lua.vim.lsp.omnifunc')
+        require('completion').on_attach()
+    end
+    local servers = {'zls'}
+    for _, lsp in ipairs(servers) do
+        lspconfig[lsp].setup {
+            on_attach = on_attach,
+        }
+    end
+EOF
+" Set completeopt to have a better completion experience
+set completeopt=menuone,noinsert,noselect
+set signcolumn=number
 
 :lua << EOF
 require "ibl".setup {
@@ -228,6 +247,6 @@ tnoremap <C-\> <C-\><C-n>
 
 
 set nohlsearch
-set relativenumber
+" set relativenumber
 set number
 

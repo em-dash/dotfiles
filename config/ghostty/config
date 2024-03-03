@@ -41,7 +41,7 @@ font-family = "WenQuanYi Micro Hei Mono"
 # font-style-italic = "OpenMoji Color"
 # font-style-bold-italic = "OpenMoji Color"
 
-font-size = 16
+font-size = 18
 
 # mouse
 mouse-hide-while-typing = true
