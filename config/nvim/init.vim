@@ -17,8 +17,9 @@ Plug 'https://github.com/alaviss/nim.nvim'
 Plug 'https://github.com/chrisbra/csv.vim'
 Plug 'https://github.com/preservim/vim-markdown'
 Plug 'https://github.com/lervag/vimtex'
-Plug 'https://github.com/ziglang/zig.vim' " more up to date than local files
-Plug 'https://github.com/RaafatTurki/hex.nvim'
+Plug 'https://git.sr.ht/~sircmpwn/hare.vim'
+Plug 'https://github.com/em-dash/zig.vim'
+Plug 'https://github.com/RaafatTurki/hex.nvim' " technically not a language but close enough
 
 " editing tools
 Plug 'https://github.com/tomtom/tcomment_vim'
