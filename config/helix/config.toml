@@ -1,0 +1,22 @@
+[editor]
+auto-pairs = false
+
+[editor.indent-guides]
+render = true
+
+[editor.soft-wrap]
+enable = true
+
+[keys.normal]
+i = "move_char_right"
+k = "insert_mode"
+a = ["move_char_right", "insert_mode"]
+n = "move_line_down"
+e = "move_line_up"
+j = "search_next"
+S-j = "search_prev"
+[keys.normal.g]
+i = "goto_line_end"
+n = "goto_last_line"
+e = "goto_file_start"
+g = "goto_line"
