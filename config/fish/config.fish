@@ -12,6 +12,8 @@ alias odx "od -t x1z"
 alias asdf "setxkbmap us colemak"
 alias quit "exit"
 alias grep "grep --color=auto"
+alias nvim "hx"
+
 if type -q helix
     alias hx "helix"
 end
