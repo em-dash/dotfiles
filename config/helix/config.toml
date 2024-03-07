@@ -16,8 +16,8 @@ a = ["move_char_right", "insert_mode"]
 n = "move_line_down"
 e = "move_line_up"
 j = "search_next"
-S-j = "search_prev"
-S-d = "delete_char_backward"
+J = "search_prev"
+D = "delete_char_backward"
 [keys.normal.g]
 i = "goto_line_end"
 n = "goto_last_line"

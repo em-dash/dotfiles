@@ -18,7 +18,7 @@ fi
 
 export PATH
 
-export EDITOR='nvim'
+export EDITOR='hx'
 
 export GITHUBMAIL='33614480+em-dash@users.noreply.github.com'
 
