@@ -1,0 +1,6 @@
+
+[language-server.zls]
+command = "zls"
+
+[[zig]]
+language-servers = [ "zls" ]
