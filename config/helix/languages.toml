@@ -2,5 +2,8 @@
 [language-server.zls]
 command = "zls"
 
-[[zig]]
+[[language]]
+name = "zig"
 language-servers = [ "zls" ]
+rulers = [100]
+text-width = 100
