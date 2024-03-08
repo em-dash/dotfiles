@@ -38,3 +38,5 @@ n = "scroll_down"
 e = "scroll_up"
 j = "no_op"
 k = "no_op"
+[keys.normal."space"]
+c = "toggle_comments"
