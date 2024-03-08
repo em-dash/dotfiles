@@ -18,7 +18,13 @@ fi
 
 export PATH
 
-export EDITOR='hx'
+if [ $(command -v hx) ] ; then
+    export EDITOR='hx'
+elif [ $(command -v helix) ] ; then
+    export EDITOR='helix'
+else
+    export EDITOR=vi
+fi
 
 export GITHUBMAIL='33614480+em-dash@users.noreply.github.com'
 
