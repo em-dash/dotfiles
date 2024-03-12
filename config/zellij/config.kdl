@@ -37,15 +37,15 @@ keybinds clear-defaults=true {
         bind "m" { TogglePaneEmbedOrFloating; SwitchToMode "Normal"; }
         bind "c" { SwitchToMode "RenamePane"; PaneNameInput 0;}
     }
-    move {
-        bind "Ctrl h" { SwitchToMode "Normal"; }
-        bind "Tab" { MovePane; }
-        bind "p" { MovePaneBackwards; }
-        bind "h" "Left" { MovePane "Left"; }
-        bind "n" "Down" { MovePane "Down"; }
-        bind "e" "Up" { MovePane "Up"; }
-        bind "i" "Right" { MovePane "Right"; }
-    }
+    // move {
+    //     bind "Ctrl h" { SwitchToMode "Normal"; }
+    //     bind "Tab" { MovePane; }
+    //     bind "p" { MovePaneBackwards; }
+    //     bind "h" "Left" { MovePane "Left"; }
+    //     bind "n" "Down" { MovePane "Down"; }
+    //     bind "e" "Up" { MovePane "Up"; }
+    //     bind "i" "Right" { MovePane "Right"; }
+    // }
     tab {
         bind "Ctrl t" { SwitchToMode "Normal"; }
         bind "r" { SwitchToMode "RenameTab"; TabNameInput 0; }

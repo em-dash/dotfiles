@@ -7,3 +7,8 @@ name = "zig"
 language-servers = [ "zls" ]
 rulers = [100]
 text-width = 100
+
+[[language]]
+name = "markdown"
+[indent]
+tab-width = 4
