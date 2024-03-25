@@ -10,7 +10,9 @@ enable = true
 
 [keys.normal]
 i = "move_char_right"
+I = "no_op"
 k = "insert_mode"
+K = ["goto_first_nonwhitespace", "insert_mode"]
 a = ["move_char_right", "insert_mode"]
 n = "move_line_down"
 N = "join_selections"
