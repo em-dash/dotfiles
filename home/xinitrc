@@ -17,6 +17,7 @@ xinput set-prop "ETPS/2 Elantech Touchpad" "libinput Tapping Enabled" 1
 fcitx5 -d
 
 xrdb -merge ~/.Xresources
+xrandr --output HDMI-0 --auto --primary --output DP-5 --auto --left-of HDMI-0
 
 exec openbox-session
 # exec awesome

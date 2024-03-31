@@ -29,7 +29,7 @@ mouse-hide-while-typing = true
 # window & process
 gtk-titlebar = false
 gtk-single-instance = false
-command = /usr/bin/fish
+# command = /bin/fish
 
 # INPUT
 keybind = ctrl+alt+r=reload_config
