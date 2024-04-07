@@ -9,6 +9,10 @@ if [ -f ~/.profile ]; then
     source ~/.profile
 fi
 
+if [[ $TERM == *ghostty ]] ; then
+    export COLORTERM=truecolor
+fi
+
 if [ $(command -v fish) ] ; then
     exec fish
 fi
