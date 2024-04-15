@@ -1,0 +1,64 @@
+#!/usr/bin/python
+import os
+
+dotfiles = ".dotfiles" # dotfiles path relative to home
+tree = os.path.expanduser("~/.dotfiles/tree")
+
+def link_dir(directory):
+    for entry in os.scandir(directory):
+        target = entry.path.split("/")
+        target.remove(dotfiles)
+        target.remove("tree")
+        target = "/".join(target)
+
+        do_this_item = True
+
+        if os.path.lexists(target):
+            if os.path.islink(target): os.remove(target)
+            elif os.path.isfile(target):
+                while (True):
+                    print("target " + target + " already exists.")
+                    response = input("delete it? [y]/n | ")
+                    if (response == "y" or response == "Y" or response == ""):
+                        os.remove(target)
+                        break
+                    elif (response == "n"):
+                        do_this_item: False
+                        break
+
+        if do_this_item:
+            if entry.is_dir():
+                os.makedirs(target, exist_ok = True)
+                link_dir(entry)
+            elif entry.is_file():
+                os.symlink(entry, target)
+                
+        
+        
+
+# def link_dir(directory):
+#     for entry in os.scandir(directory):
+#         target = entry.path.split("/")
+#         target.remove(dotfiles)
+#         target.remove("tree")
+#         target = "/".join(target)
+
+#         if entry.is_dir() and not os.path.islink(entry):
+#             os.makedirs(target, exist_ok = True)
+#             link_dir(entry)
+#         else:
+#             if os.path.isfile(target) or os.path.ismount(target):
+#                 while True:
+#                     print("symlink target " + target + " already exists.")
+#                     i = input("delete it? [y]/n   ").lower()
+#                     if i == "" or i == "y":
+#                         os.remove(target)
+#                     else:
+#                         continue
+#             else:
+#                 if os.path.islink(target):
+#                     os.remove(target)
+#             os.symlink(entry, target)
+
+
+link_dir(tree)
