@@ -1,5 +1,6 @@
 # visuals
-theme = "Adventure"
+# theme = "Adventure"
+theme = "kanagawabones"
 window-padding-balance = true
 # adjust-cell-height = 10%
 # adjust-underline-thickness = 0.5
