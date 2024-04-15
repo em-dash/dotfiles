@@ -1,7 +1,0 @@
-[submodule "theme/posy-improved-cursor-linux"]
-	path = theme/posy-improved-cursor-linux
-	url = https://github.com/simtrami/posy-improved-cursor-linux
-
-[submodule "config/awesome/cyclefocus"]
-    path = config/awesome/cyclefocus
-    url = https://github.com/blueyed/awesome-cyclefocus
