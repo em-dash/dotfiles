@@ -12,7 +12,7 @@ xset r rate 300 45
 xinput set-prop "ETPS/2 Elantech Touchpad" "libinput Tapping Enabled" 1
 
 # brightness and volume
-# xbindkeys
+xbindkeys
 
 fcitx5 -d
 

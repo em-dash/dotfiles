@@ -8,12 +8,8 @@ adjust-underline-thickness = -50%
 adjust-underline-position = 25%
 
 # font
-font-family = "Fantasque Sans Mono"
+font-family = "Maple Mono"
 font-feature = -calt
-# font-style = "SemiLight"
-# font-style-bold = "SemiBold"
-# font-style-italic = "SemiLight Italic"
-# font-style-bold-italic = "SemiBold Italic"
 font-family = "WenQuanYi Micro Hei Mono"
 # currently not working
 # font-family = "OpenMoji"
