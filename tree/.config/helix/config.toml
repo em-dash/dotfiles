@@ -1,6 +1,7 @@
 theme = "kanagawa"
 
 [editor]
+auto-pairs = false
 
 [editor.indent-guides]
 render = true
@@ -28,6 +29,7 @@ e = "goto_file_start"
 g = "goto_line"
 j = "no_op"
 k = "no_op"
+l = "no_op"
 [keys.normal.v]
 h = "move_char_left"
 i = "move_char_right"
@@ -36,6 +38,14 @@ n = "move_line_down"
 e = "move_line_up"
 j = "search_next"
 S-j = "search_prev"
+l = "move_next_word_end"
+[keys.normal.v.g]
+i = "goto_line_end"
+n = "goto_last_line"
+e = "goto_file_start"
+j = "no_op"
+k = "no_op"
+l = "no_op"
 [keys.normal.z]
 n = "scroll_down"
 e = "scroll_up"
