@@ -2,10 +2,9 @@
 # theme = "Adventure"
 theme = "kanagawabones"
 window-padding-balance = true
-# adjust-cell-height = 10%
 # adjust-underline-thickness = 0.5
-adjust-underline-thickness = -50%
-adjust-underline-position = 25%
+# adjust-underline-thickness = -50%
+# adjust-underline-position = 25%
 
 # font
 font-family = "Maple Mono"
@@ -18,7 +17,7 @@ font-family = "WenQuanYi Micro Hei Mono"
 # font-style-italic = "OpenMoji Color"
 # font-style-bold-italic = "OpenMoji Color"
 
-font-size = 18
+font-size = 15
 
 # mouse
 mouse-hide-while-typing = true
