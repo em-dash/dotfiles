@@ -53,5 +53,5 @@ j = "no_op"
 k = "no_op"
 [keys.normal."space"]
 c = "toggle_comments"
-n = "buffer_next"
-e = "buffer_previous"
+n = "goto_next_buffer"
+e = "goto_previous_buffer"
