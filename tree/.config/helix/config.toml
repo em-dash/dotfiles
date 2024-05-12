@@ -1,7 +1,7 @@
 theme = "kanagawa"
 
 [editor]
-auto-pairs = false
+# auto-pairs = false
 
 [editor.indent-guides]
 render = true
