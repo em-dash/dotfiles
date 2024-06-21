@@ -1,14 +1,15 @@
+[[language]]
+name = "peg"
+scope = "source.peg"
+file-types = ["peg"]
+indent = { tab-width = 4, unit = "    " }
 
-[language-server.zls]
-command = "zls"
 
 [[language]]
 name = "zig"
-language-servers = [ "zls" ]
 rulers = [100]
 text-width = 100
 
 [[language]]
 name = "markdown"
-[indent]
-tab-width = 4
+indent = { tab-width = 4, unit = "    "}
