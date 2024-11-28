@@ -3,7 +3,7 @@ name = "peg"
 scope = "source.peg"
 file-types = ["peg"]
 indent = { tab-width = 4, unit = "    " }
-
+comment-tokens = "#"
 
 [[language]]
 name = "zig"

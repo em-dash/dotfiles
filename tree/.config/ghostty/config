@@ -1,5 +1,4 @@
 # visuals
-# theme = "Adventure"
 theme = "kanagawabones"
 window-padding-balance = true
 # adjust-underline-thickness = 0.5
@@ -11,7 +10,7 @@ font-family = "Maple Mono"
 font-feature = -calt
 font-family = "WenQuanYi Micro Hei Mono"
 # currently not working
-# font-family = "OpenMoji"
+# font-family = "OpenMoji Color"
 # font-style = "OpenMoji Color"
 # font-style-bold = "OpenMoji Color"
 # font-style-italic = "OpenMoji Color"

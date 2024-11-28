@@ -10,6 +10,7 @@ xset r rate 300 45
 # xmodmap -e "keycode 135 = Super_R"
 
 xinput set-prop "ETPS/2 Elantech Touchpad" "libinput Tapping Enabled" 1
+xinput set-prop "BenQ ZOWIE BenQ ZOWIE Gaming Mouse" "libinput Accel Profile Enabled" 0, 1
 
 # brightness and volume
 xbindkeys
