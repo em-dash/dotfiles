@@ -13,3 +13,15 @@ text-width = 100
 [[language]]
 name = "markdown"
 indent = { tab-width = 4, unit = "    "}
+
+[language-server.haskell-language-server]
+config.haskell.formattingProvider = "ormolu" # default is "ormolu"
+# config.haskell.checkParents = "NeverCheck" # default is "OnSave"
+# config.haskell.maxCompletions = 2 # default  is 40
+
+[[language]]
+name = "haskell"
+# formatter = { command = "ormolu", args = ["--stdin-input-file ./*.cabal"] }
+language-servers = [ "haskell-language-server" ]
+auto-format = true
+
