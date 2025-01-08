@@ -26,6 +26,10 @@ else
     export EDITOR=vi
 fi
 
+if [ $(command -v guix) ] ; then
+    export GUIX_LOCPATH="/home/sav/.guix-profile/lib/locale"
+fi
+
 export GITHUBMAIL='33614480+em-dash@users.noreply.github.com'
 
 export LESS='R'

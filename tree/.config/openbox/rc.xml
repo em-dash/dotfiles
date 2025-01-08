@@ -46,7 +46,8 @@
 
 <theme>
   <name>Salt</name>
-  <titleLayout>NLDIMC</titleLayout>
+  <!-- <titleLayout>NLDIMC</titleLayout> -->
+  <!-- <titleLayout></titleLayout> -->
   <!--
       available characters are NDSLIMC, each can occur at most once.
       N: window icon
@@ -323,6 +324,9 @@
 
   <!-- Keybindings for windows -->
   <keybind key="A-F4">
+    <action name="Close"/>
+  </keybind>
+  <keybind key="W-x">
     <action name="Close"/>
   </keybind>
   <keybind key="A-Escape">
@@ -721,6 +725,7 @@
 </menu>
 
 <applications>
+  <application class="*"><decor>no</decor></application>
 <!--
   # this is an example with comments through out. use these to make your
   # own rules, but without the comments of course.

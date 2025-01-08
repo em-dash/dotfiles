@@ -5,8 +5,10 @@ window-padding-balance = true
 # adjust-underline-thickness = -50%
 # adjust-underline-position = 25%
 
+window-decoration = true
+
 # font
-font-family = "Maple Mono"
+font-family = "Maple Mono NL NF CN"
 font-feature = -calt
 font-family = "WenQuanYi Micro Hei Mono"
 # currently not working
@@ -43,4 +45,3 @@ copy-on-select = false
 
 # FUNCTIONALITY
 shell-integration = fish
-term = ghostty
