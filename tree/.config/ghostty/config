@@ -43,4 +43,3 @@ copy-on-select = false
 
 # FUNCTIONALITY
 shell-integration = fish
-term = ghostty
