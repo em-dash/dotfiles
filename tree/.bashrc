@@ -14,6 +14,7 @@ if [[ $TERM == *ghostty ]] ; then
 fi
 
 if [ $(command -v fish) ] ; then
+    export SHELL=fish
     exec fish
 fi
 

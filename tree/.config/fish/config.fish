@@ -8,12 +8,11 @@ alias ls "ls --color=auto"
 alias la "ls -A"
 alias ll "ls -lAh"
 alias lsl "ls -lAh | less"
-alias odx "od -t x1z"
 alias asdf "setxkbmap us colemak"
 alias quit exit
 alias grep "grep --color=auto"
-alias nvim hx
-alias ze "zellij edit"
+alias doasedit "doas helix --config ~/.config/helix/config.toml"
+alias tg "grep -rI --exclude-dir .* --exclude .* . -e"
 
 if type -q helix
     alias hx helix

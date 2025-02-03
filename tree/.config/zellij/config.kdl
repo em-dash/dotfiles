@@ -283,11 +283,27 @@ pane_frames false
 //     }
 // }
 
+themes {
+    carbonfox { // but nerfed to 8 colors for whatever reason
+        bg "#282828"
+        fg "#dfdfe0"
+        black  "#282828"
+        red  "#ee5396"
+        green  "#25be6a"
+        yellow  "#08bdba"
+        blue  "#78a9ff"
+        magenta  "#be95ff"
+        cyan  "#33b1ff"
+        white "#dfdfe0"
+        orange "#f16da6"
+    }
+}
+
 // Choose the theme that is specified in the themes section.
 // Default: default
 //
 // theme "terminal"
-theme "gruvbox"
+theme "carbonfox"
 
 // The name of the default layout to load on startup
 // Default: "default"

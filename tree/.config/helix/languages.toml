@@ -9,6 +9,11 @@ comment-tokens = "#"
 name = "zig"
 rulers = [100]
 text-width = 100
+language-servers = [ "zls" ]
+
+[[grammar]]
+name = "zig"
+source = { git = "https://github.com/tree-sitter-grammars/tree-sitter-zig", rev = "HEAD" }
 
 [[language]]
 name = "markdown"

@@ -1,16 +1,15 @@
 # visuals
-theme = "kanagawabones"
+theme = carbonfox
 window-padding-balance = true
-# adjust-underline-thickness = 0.5
-# adjust-underline-thickness = -50%
-# adjust-underline-position = 25%
+gtk-adwaita = false
+window-decoration = false
 
-window-decoration = true
+adjust-cell-height = 20%
 
 # font
 font-family = "Maple Mono NL NF CN"
 font-feature = -calt
-font-family = "WenQuanYi Micro Hei Mono"
+# font-family = "WenQuanYi Micro Hei Mono"
 # currently not working
 # font-family = "OpenMoji Color"
 # font-style = "OpenMoji Color"
@@ -18,7 +17,7 @@ font-family = "WenQuanYi Micro Hei Mono"
 # font-style-italic = "OpenMoji Color"
 # font-style-bold-italic = "OpenMoji Color"
 
-font-size = 15
+font-size = 14
 
 # mouse
 mouse-hide-while-typing = true
