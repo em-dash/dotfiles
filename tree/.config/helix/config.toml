@@ -1,7 +1,6 @@
 theme = "carbonfox"
 
 [editor]
-auto-pairs = false
 
 [editor.indent-guides]
 render = true
