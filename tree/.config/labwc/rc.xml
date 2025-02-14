@@ -261,9 +261,6 @@
     <keybind key="W-f">
       <action name="ToggleMaximize" />
     </keybind>
-    <keybind key="W-t">
-      <action name="ToggleDecorations" />
-    </keybind>
     <keybind key="A-Left">
       <action name="MoveToEdge" direction="left" />
     </keybind>
@@ -683,8 +680,9 @@
   -->
 
   <windowRules>
-    <!-- <windowRule identifier="*" serverDecoration="no" /> -->
       <windowRule identifier="*"><action name="ToggleDecorations"/></windowRule>
+      <windowRule identifier="thorium-browser"><action name="ToggleDecorations"/></windowRule>
+      <!-- <windowRule identifier="thorium-browser" serverDecoration="no"/> -->
   </windowRules>
 
   <menu>
