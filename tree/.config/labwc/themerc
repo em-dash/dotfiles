@@ -6,7 +6,7 @@
 # make sure all other lines are commented out or deleted.
 
 # general
-border.width: 1
+border.width: 3
 
 #
 # The global padding.{width,height} of openbox are not supported because
@@ -16,8 +16,8 @@ window.titlebar.padding.width: 0
 window.titlebar.padding.height: 0
 
 # window border
-window.active.border.color: #aaaaaa
-window.inactive.border.color: #aaaaaa
+window.active.border.color: #cccccc
+window.inactive.border.color: #999999
 
 # ToggleKeybinds status indicator
 window.active.indicator.toggled-keybind.color: #ff0000

@@ -30,8 +30,9 @@
     <name></name>
     <icon></icon>
     <titlebar>
-      <layout>icon:iconify,max,close</layout>
-      <showTitle>yes</showTitle>
+      <layout>:</layout>
+      <!-- <layout>icon:iconify,max,close</layout> -->
+      <showTitle>no</showTitle>
     </titlebar>
     <cornerRadius>0</cornerRadius>
     <keepBorder>yes</keepBorder>
@@ -233,6 +234,9 @@
     <layoutScope>global</layoutScope>
     <repeatRate>25</repeatRate>
     <repeatDelay>300</repeatDelay>
+    <keybind key="W-S-q">
+      <action name="Exit" />
+    </keybind>
     <keybind key="W-S-r">
       <action name="Reconfigure" />
     </keybind>
@@ -251,11 +255,14 @@
     <!-- <keybind key="W-S-s"> -->
       <!-- <action name="Execute" command="screenshot-" /> -->
     <!-- </keybind> -->
-    <keybind key="A-F4">
+    <keybind key="W-x">
       <action name="Close" />
     </keybind>
     <keybind key="W-f">
       <action name="ToggleMaximize" />
+    </keybind>
+    <keybind key="W-t">
+      <action name="ToggleDecorations" />
     </keybind>
     <keybind key="A-Left">
       <action name="MoveToEdge" direction="left" />
@@ -358,18 +365,18 @@
     <doubleClickTime>500</doubleClickTime>
 
     <context name="Frame">
-      <mousebind button="A-Left" action="Press">
-        <action name="Focus" />
-        <action name="Raise" />
-      </mousebind>
-      <mousebind button="A-Left" action="Drag">
+      <!-- <mousebind button="W-Left" action="Press"> -->
+        <!-- <action name="Focus" /> -->
+        <!-- <action name="Raise" /> -->
+      <!-- </mousebind> -->
+      <mousebind button="W-Left" action="Drag">
         <action name="Move" />
       </mousebind>
-      <mousebind button="A-Right" action="Press">
-        <action name="Focus" />
-        <action name="Raise" />
-      </mousebind>
-      <mousebind button="A-Right" action="Drag">
+      <!-- <mousebind button="A-Right" action="Press"> -->
+        <!-- <action name="Focus" /> -->
+        <!-- <action name="Raise" /> -->
+      <!-- </mousebind> -->
+      <mousebind button="W-Right" action="Drag">
         <action name="Resize" />
       </mousebind>
     </context>
@@ -674,6 +681,11 @@
       </windowRule>
     </windowRules>
   -->
+
+  <windowRules>
+    <!-- <windowRule identifier="*" serverDecoration="no" /> -->
+      <windowRule identifier="*"><action name="ToggleDecorations"/></windowRule>
+  </windowRules>
 
   <menu>
     <ignoreButtonReleasePeriod>250</ignoreButtonReleasePeriod>

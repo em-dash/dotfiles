@@ -2,7 +2,7 @@
 theme = carbonfox
 window-padding-balance = true
 gtk-adwaita = false
-window-decoration = none
+window-decoration = server
 
 adjust-cell-height = 20%
 
