@@ -9,7 +9,9 @@ comment-tokens = "#"
 name = "zig"
 rulers = [100]
 text-width = 100
-language-servers = [ "zls" ]
+# language-servers = [ { name = "zls", except-features = [ "completion", "diagnostics", "signature-help", "hover" ] } ]
+language-servers = [ { name = "zls" }]
+
 
 [[grammar]]
 name = "zig"

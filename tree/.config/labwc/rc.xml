@@ -245,6 +245,12 @@
     <keybind key="W-r">
       <action name="Execute" command="rofi -show run" />
     </keybind>
+    <keybind key="W-s">
+      <action name="Execute" command="grim -o - | xclip -selection clipboard -t image/png -i" />
+    </keybind>
+    <!-- <keybind key="W-S-s"> -->
+      <!-- <action name="Execute" command="screenshot-" /> -->
+    <!-- </keybind> -->
     <keybind key="A-F4">
       <action name="Close" />
     </keybind>
@@ -288,10 +294,10 @@
       <action name="Execute" command="amixer sset Master toggle" />
     </keybind>
     <keybind key="XF86_MonBrightnessUp">
-      <action name="Execute" command="brightnessctl set +10%" />
+      <action name="Execute" command="brightnessctl set +2.5%" />
     </keybind>
     <keybind key="XF86_MonBrightnessDown">
-      <action name="Execute" command="brightnessctl set 10%-" />
+      <action name="Execute" command="brightnessctl set 2.5%-" />
     </keybind>
   <!-- SnapToRegion via W-Numpad -->
   <!--
