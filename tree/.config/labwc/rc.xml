@@ -30,9 +30,8 @@
     <name></name>
     <icon></icon>
     <titlebar>
-      <layout>:</layout>
-      <!-- <layout>icon:iconify,max,close</layout> -->
-      <showTitle>no</showTitle>
+      <layout>icon:iconify,max,close</layout>
+      <showTitle>yes</showTitle>
     </titlebar>
     <cornerRadius>0</cornerRadius>
     <keepBorder>yes</keepBorder>
@@ -682,7 +681,7 @@
   <windowRules>
       <windowRule identifier="*"><action name="ToggleDecorations"/></windowRule>
       <windowRule identifier="thorium-browser"><action name="ToggleDecorations"/></windowRule>
-      <!-- <windowRule identifier="thorium-browser" serverDecoration="no"/> -->
+      <windowRule identifier="thorium-browser"><action name="ToggleDecorations"/></windowRule>
   </windowRules>
 
   <menu>
