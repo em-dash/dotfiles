@@ -13,9 +13,9 @@ text-width = 100
 language-servers = [ { name = "zls" }]
 
 
-[[grammar]]
-name = "zig"
-source = { git = "https://github.com/tree-sitter-grammars/tree-sitter-zig", rev = "HEAD" }
+# [[grammar]]
+# name = "zig"
+# source = { git = "https://github.com/tree-sitter-grammars/tree-sitter-zig", rev = "HEAD" }
 
 [[language]]
 name = "markdown"

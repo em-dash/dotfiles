@@ -553,7 +553,7 @@
     If mouseEmulation is enabled, all touch up/down/motion events are
     translated to mouse button and motion events.
   -->
-  <touch deviceName="" mapToOutput="" mouseEmulation="no"/>
+  <!-- <touch deviceName="" mapToOutput="" mouseEmulation="no"/> -->
 
   <!--
     The tablet cursor movement can be restricted to a single output.
@@ -580,13 +580,13 @@
     When using mouse emulation, the pen tip [tip] and the stylus buttons
     can be set to any available mouse button [Left|Right|Middle|..|Task].
   -->
-  <tablet mapToOutput="" rotate="0" mouseEmulation="no">
+  <!-- <tablet mapToOutput="" rotate="0" mouseEmulation="no"> -->
     <!-- Active area dimensions are in mm -->
-    <area top="0.0" left="0.0" width="0.0" height="0.0" />
-    <map button="Tip" to="Left" />
-    <map button="Stylus" to="Right" />
-    <map button="Stylus2" to="Middle" />
-  </tablet>
+    <!-- <area top="0.0" left="0.0" width="0.0" height="0.0" /> -->
+    <!-- <map button="Tip" to="Left" /> -->
+    <!-- <map button="Stylus" to="Right" /> -->
+    <!-- <map button="Stylus2" to="Middle" /> -->
+  <!-- </tablet> -->
 
   <!--
     All tablet tools, except of type mouse and lens, use absolute
@@ -596,7 +596,7 @@
     a value lower than 1.0 decreases the speed, using a value greater than
     1.0 increases the speed of the cursor.
   -->
-  <tabletTool motion="absolute" relativeMotionSensitivity="1.0" />
+  <!-- <tabletTool motion="absolute" relativeMotionSensitivity="1.0" /> -->
 
   <!--
     The *category* attribute is optional and can be set to touch, touchpad,
@@ -680,8 +680,8 @@
 
   <windowRules>
       <windowRule identifier="*"><action name="ToggleDecorations"/></windowRule>
-      <windowRule identifier="thorium-browser"><action name="ToggleDecorations"/></windowRule>
-      <windowRule identifier="thorium-browser"><action name="ToggleDecorations"/></windowRule>
+      <windowRule identifier="librewolf"><action name="ToggleDecorations"/></windowRule>
+      <windowRule identifier="librewolf"><action name="ToggleDecorations"/></windowRule>
   </windowRules>
 
   <menu>

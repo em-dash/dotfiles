@@ -1,0 +1,3 @@
+[submodule "submodules/plugin-foreign-env"]
+	path = submodules/plugin-foreign-env
+	url = https://github.com/oh-my-fish/plugin-foreign-env

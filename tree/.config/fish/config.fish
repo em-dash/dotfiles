@@ -1,3 +1,7 @@
+set fish_function_path $fish_function_path ~/.dotfiles/submodules/plugin-foreign-env/functions
+
+fenv source /etc/profile
+
 if status is-interactive
     # Commands to run in interactive sessions can go here
 end
@@ -7,6 +11,7 @@ if test $TERM = "*ghostty"
 end
 
 fish_add_path ~/.local/bin
+fish_add_path ~/.cargo/bin
 
 alias ls "ls --color=auto"
 alias la "ls -A"
