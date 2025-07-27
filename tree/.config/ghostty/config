@@ -33,6 +33,7 @@ keybind = shift+end=scroll_to_bottom
 keybind = f11=toggle_fullscreen
 keybind = ctrl+alt+n=jump_to_prompt:+1
 keybind = ctrl+alt+e=jump_to_prompt:-1
+keybind = caps_lock=unbind
 
 # clipboard
 clipboard-trim-trailing-spaces = true
